@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="GBK" ?>
+
+<tree>
+	<node   Title="冠脉造影"  FieldType="Group">
+     			<node Title="各冠脉节段是否有明显狭窄"  FieldType="Text" FieldName1 ="gmjd"  ComboName="gmzy_jbxx_gmjd" TableName="Coronary"></node>
+			<node Title="冠脉优势型"  FieldType="Text" FieldName1 ="gmysx"  ComboName="gmzy_jbxx_gmysx" TableName="Coronary"></node>
+			<node Title="畸形冠脉"  FieldType="Text" FieldName1 ="jxgm"  ComboName="gmzy_jbxx_jxgm" TableName="Coronary"></node>
+			<node Title="是否有侧支血管"  FieldType="Text" FieldName1 ="czxg"  ComboName="gmzy_jbxx_czxg" TableName="Coronary"></node>
+			<node Title="既往有无CABG史"  FieldType="Text" FieldName1 ="cabgs"  ComboName="gmzy_jbxx_cabgs" TableName="Coronary"></node>
+			<node Title="曝光时间"  FieldType="Numerical" FieldName1 ="bgsj"  ComboName="" TableName="Coronary"></node>
+			<node Title="辐射剂量"  FieldType="Numerical" FieldName1 ="fsjl"  ComboName="" TableName="Coronary"></node>
+			<node Title="术后诊断"  FieldType="Text" FieldName1 ="shzd"  ComboName="gmzy_jbxx_shzd" TableName="Coronary"></node>
+			<node Title="并发症"  FieldType="Text" FieldName1 ="bfz"  ComboName="gmzy_jbxx_bfz" TableName="Coronary"></node>
+			<node Title="闭合方法"  FieldType="Text" FieldName1 ="bhff"  ComboName="gmzy_jbxx_bhff" TableName="Coronary"></node>
+			<node Title="术后制动"  FieldType="Text" FieldName1 ="zhidong"  ComboName="gmzy_jbxx_zhidong" TableName="Coronary"></node>
+	</node>
+	<node  Title="病变信息"  FieldType="Group">
+			<node Title="病变部位"  FieldType="Text" FieldName1 ="bbbw"  ComboName="CoronaryDetail_bbbw" TableName="CoronaryDetail"></node>
+			<node Title="狭窄程度"  FieldType="NumericalRange" FieldName1 ="xzcdValue1" FieldName2 ="xzcdValue2"  ComboName="" TableName="CoronaryDetail"></node>
+			<node Title="病变特点"  FieldType="Text" FieldName1 ="bbtd"  ComboName="gmzy_xgxxlr_bbtd" TableName="CoronaryDetail"></node>
+			<node Title="TIMI血流"  FieldType="Text" FieldName1 ="Timi"  ComboName="gmzy_xgxxlr_TIMI" TableName="CoronaryDetail"></node>
+			<node Title="病变长度mm"  FieldType="NumericalRange" FieldName1 ="bbcdValue1" FieldName2="bbcdValue2"  ComboName="病变长度" TableName="CoronaryDetail"></node>
+			<node Title="病变分型"  FieldType="Text" FieldName1 ="bbfx"  ComboName="gmzy_xgxxlr_bbfx" TableName="CoronaryDetail"></node>
+			<node Title="是否是犯罪血管"  FieldType="Text" FieldName1 ="fzxg"  ComboName="gmzy_xgxxlr_fzxg" TableName="CoronaryDetail"></node>
+			<node Title="既往是否有介入治疗"  FieldType="Text" FieldName1 ="jrzl"  ComboName="gmzy_xgxxlr_jrzl" TableName="CoronaryDetail"></node>
+			<node Title="既往支架植入情况"  FieldType="Text" FieldName1 ="jwzj"  ComboName="gmzy_xgxxlr_jwzj" TableName="CoronaryDetail"></node>
+			<node Title="既往支架植入类型"  FieldType="Text" FieldName1 ="jwzjlx"  ComboName="gmzy_xgxxlr_jwzjlx" TableName="CoronaryDetail"></node>
+			<node Title="本次处理意见"  FieldType="Text" FieldName1 ="clyj"  ComboName="" TableName="CoronaryDetail"></node>
+
+	</node>
+	<node Title="病变耗材记录" FieldType="Group" >
+		<node Title="耗材名称"  FieldType="Text" FieldName1 ="EquipmentName"  ComboName="" TableName="CoronaryEquipmentDetail"  > </node>
+		<node Title="规格" FieldType="Text" FieldName1 ="EquipmentType"  ComboName=""  TableName="CoronaryEquipmentDetail" ></node>
+		<node Title="品牌" FieldType="Text" FieldName1 ="Brand"  ComboName="" TableName="CoronaryEquipmentDetail"  ></node>
+		<node Title="供应商"  FieldType="Text" FieldName1 ="Provider"  ComboName="" TableName="CoronaryEquipmentDetail"  > </node>
+		<node Title="主码" FieldType="Text" FieldName1 ="MainbarCode"  ComboName=""  TableName="CoronaryEquipmentDetail" ></node>
+		<node Title="类型" FieldType="Text" FieldName1 ="Category"  ComboName="耗材类型" TableName="CoronaryEquipmentDetail"  ></node>
+		<node Title="使用是否成功" FieldType="Text" FieldName1 ="sysfcg"  ComboName="使用是否成功" TableName="CoronaryEquipmentDetail"  ></node>
+		<node Title="最小压力" FieldType="Numerical" FieldName1 ="zxyl"  ComboName="" TableName="CoronaryEquipmentDetail"  ></node>
+		<node Title="最大压力" FieldType="Numerical" FieldName1 ="zdyl"  ComboName="" TableName="CoronaryEquipmentDetail"  ></node>
+		<node Title="释放时间" FieldType="Numerical" FieldName1 ="sfsj"  ComboName="" TableName="CoronaryEquipmentDetail"  ></node>
+
+
+	</node>
+	<node   Title="介入治疗情况"  FieldType="Group">
+			<node Title="采用的术式"  FieldType="Text" FieldName1 ="cyss"  ComboName="gmzy_jrzlqk_cyss" TableName="CoronaryInterveneDetail"></node>
+			<node Title="该部位介入是否成功"  FieldType="Text" FieldName1 ="bwjr"  ComboName="gmzy_jrzlqk_bwjr" TableName="CoronaryInterveneDetail"></node>
+			<node Title="治疗后狭窄程度(%)"  FieldType="NumericalRange" FieldName1 ="zlhxzcdValue1"  FieldName2 ="zlhxzcdValue2" ComboName="" TableName="CoronaryInterveneDetail"></node>
+			<node Title="治疗后TIMI血流"  FieldType="Text" FieldName1 ="zlhTIMI"  ComboName="gmzy_jrzlqk_zlhTIMI" TableName="CoronaryInterveneDetail"></node>
+			<node Title="该血管植入支架数量"  FieldType="Text" FieldName1 ="zrzj"  ComboName="gmzy_jrzlqk_zrzj" TableName="CoronaryInterveneDetail"></node>
+			<node Title="术中并发症"  FieldType="Text" FieldName1 ="szbfz"  ComboName="gmzy_jrzlqk_szbfz" TableName="CoronaryInterveneDetail"></node>
+	</node>
+	<node   Title="FFR"  FieldType="Group">
+			<node Title="术前FFR"  FieldType="Numerical" FieldName1 ="FFR1"  ComboName="" TableName="CoronaryFFRDetail"></node>
+			<node Title="术后FFR"  FieldType="Numerical" FieldName1 ="FFR2"  ComboName="" TableName="CoronaryFFRDetail"></node>
+			<node Title="术前是否有跳跃"  FieldType="Text" FieldName1 ="ty1"   ComboName="gmzy_FFR_ty1" TableName="CoronaryFFRDetail"></node>
+			<node Title="术后是否有跳跃"  FieldType="Text" FieldName1 ="ty2"  ComboName="gmzy_FFR_ty2" TableName="CoronaryFFRDetail"></node>
+	</node>
+	<node   Title="IVUS"  FieldType="Group">
+		<node   Title="IVUS术前"  FieldType="Group">
+			<node Title="管腔最小直径(mm)"  FieldType="Numerical" FieldName1 ="gqzxzj1"  ComboName="" TableName="CoronaryIVUSDetail"></node>
+			<node Title="管腔最大直径(mm)"  FieldType="Numerical" FieldName1 ="gqzdzj1"  ComboName="" TableName="CoronaryIVUSDetail"></node>
+			<node Title="管腔最小面积(mm2)"  FieldType="Numerical" FieldName1 ="gqzxmj1"  ComboName="" TableName="CoronaryIVUSDetail"></node>
+			<node Title="EEM最小直径(mm)"  FieldType="Numerical" FieldName1 ="EEMzxzj1"  ComboName="" TableName="CoronaryIVUSDetail"></node>
+			<node Title="EEM最大直径(mm)"  FieldType="Numerical" FieldName1 ="EEMzdzj1"  ComboName="" TableName="CoronaryIVUSDetail"></node>
+			<node Title="EEM面积(mm2)"  FieldType="Numerical" FieldName1 ="EEMmj1"  ComboName="" TableName="CoronaryIVUSDetail"></node>
+			<node Title="斑块负荷(%)"  FieldType="Text" FieldName1 ="bkfh1"  ComboName="斑块负荷" TableName="CoronaryIVUSDetail"></node>
+			<node Title="IVUS所见"  FieldType="Text" FieldName1 ="IVUSsj1"  ComboName="gmzy_IVUS_IVUSsj1" TableName="CoronaryIVUSDetail"></node>
+		</node>
+		<node   Title="IVUS术后"  FieldType="Group">
+			<node Title="管腔最小直径(mm)"  FieldType="Numerical" FieldName1 ="gqzxzj2"  ComboName="" TableName="CoronaryIVUSDetail"></node>
+			<node Title="管腔最大直径(mm)"  FieldType="Numerical" FieldName1 ="gqzdzj2"  ComboName="" TableName="CoronaryIVUSDetail"></node>
+			<node Title="管腔最小面积(mm2)"  FieldType="Numerical" FieldName1 ="gqzxmj2"  ComboName="" TableName="CoronaryIVUSDetail"></node>
+			<node Title="EEM最小直径(mm)"  FieldType="Numerical" FieldName1 ="EEMzxzj2"  ComboName="" TableName="CoronaryIVUSDetail"></node>
+			<node Title="EEM最大直径(mm)"  FieldType="Numerical" FieldName1 ="EEMzdzj2"  ComboName="" TableName="CoronaryIVUSDetail"></node>
+			<node Title="EEM面积(mm2)"  FieldType="Numerical" FieldName1 ="EEMmj2"  ComboName="" TableName="CoronaryIVUSDetail"></node>
+			<node Title="斑块负荷(%)"  FieldType="Text" FieldName1 ="bkfh2"  ComboName="gmzy_IVUS_bkfh1" TableName="CoronaryIVUSDetail"></node>
+			<node Title="IVUS所见"  FieldType="Text" FieldName1 ="IVUSsj2"  ComboName="gmzy_IVUS_IVUSsj2" TableName="CoronaryIVUSDetail"></node>
+
+		</node>
+	</node>
+	<node   Title="OCT"  FieldType="Group">
+		<node   Title="OCT术前"  FieldType="Group">
+			<node Title="管腔最小直径(mm)"  FieldType="Numerical" FieldName1 ="gqzxzj1"  ComboName="" TableName="CoronaryOCTDetail"></node>
+			<node Title="管腔最大直径(mm)"  FieldType="Numerical" FieldName1 ="gqzdzj1"  ComboName="" TableName="CoronaryOCTDetail"></node>
+			<node Title="管腔最小面积(mm2)"  FieldType="Numerical" FieldName1 ="gqzxmj1"  ComboName="" TableName="CoronaryOCTDetail"></node>
+			<node Title="EEM最小直径(mm)"  FieldType="Numerical" FieldName1 ="EEMzxzj1"  ComboName="" TableName="CoronaryOCTDetail"></node>
+			<node Title="EEM最大直径(mm)"  FieldType="Numerical" FieldName1 ="EEMzdzj1"  ComboName="" TableName="CoronaryOCTDetail"></node>
+			<node Title="EEM面积(mm2)"  FieldType="Numerical" FieldName1 ="EEMmj1"  ComboName="" TableName="CoronaryOCTDetail"></node>
+			<node Title="斑块负荷(%)"  FieldType="Text" FieldName1 ="bkfh1"  ComboName="gmzy_IVUS_bkfh1" TableName="CoronaryOCTDetail"></node>
+			<node Title="OCT所见"  FieldType="Text" FieldName1 ="OCTsj1"  ComboName="gmzy_OCT_OCTsj1" TableName="CoronaryOCTDetail"></node>
+		</node>
+		<node   Title="OCT术后"  FieldType="Group">
+			<node Title="管腔最小直径(mm)"  FieldType="Numerical" FieldName1 ="gqzxzj2"  ComboName="" TableName="CoronaryOCTDetail"></node>
+			<node Title="管腔最大直径(mm)"  FieldType="Numerical" FieldName1 ="gqzdzj2"  ComboName="" TableName="CoronaryOCTDetail"></node>
+			<node Title="管腔最小面积(mm2)"  FieldType="Numerical" FieldName1 ="gqzxmj2"  ComboName="" TableName="CoronaryOCTDetail"></node>
+			<node Title="EEM最小直径(mm)"  FieldType="Numerical" FieldName1 ="EEMzxzj2"  ComboName="" TableName="CoronaryOCTDetail"></node>
+			<node Title="EEM最大直径(mm)"  FieldType="Numerical" FieldName1 ="EEMzdzj2"  ComboName="" TableName="CoronaryOCTDetail"></node>
+			<node Title="EEM面积(mm2)"  FieldType="Numerical" FieldName1 ="EEMmj2"  ComboName="" TableName="CoronaryOCTDetail"></node>
+			<node Title="斑块负荷(%)"  FieldType="Text" FieldName1 ="bkfh2"  ComboName="gmzy_IVUS_bkfh1" TableName="CoronaryOCTDetail"></node>
+			<node Title="OCT所见"  FieldType="Text" FieldName1 ="OCTsj2"  ComboName="gmzy_OCT_OCTsj2" TableName="CoronaryOCTDetail"></node>
+
+		</node>
+	</node>
+	<node   Title="旋磨"  FieldType="Group">
+			<node Title="磨头"  FieldType="Text" FieldName1 ="mtdx"  ComboName="gmzy_xm_mtdx" TableName="CoronaryROTADetail"></node>
+			<node Title="转数"  FieldType="Numerical" FieldName1 ="zs"  ComboName="" TableName="CoronaryROTADetail"></node>
+			<node Title="即刻效果"  FieldType="Text" FieldName1 ="jkxg"   ComboName="" TableName="CoronaryROTADetail"></node>
+
+	</node>
+
+</tree>
+
+

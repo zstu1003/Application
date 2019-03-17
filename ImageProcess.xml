@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<body>
+  <StudyInfo>AccessionNumber='DSA258' PatientID = 'T18' PatientName = '孔明112' Sex = '' ExamineName = '' LesionCount = '1'</StudyInfo>
+  <DSAVideo>
+    <Image ImageFile="Image\\11111.dcm" />
+    <Image ImageFile="Image\\2.dcm" />
+    <Image ImageFile="Image\\4.dcm" />
+    <Image ImageFile="Image\\5.dcm" />
+    <Image ImageFile="Image\\6.dcm" />
+  </DSAVideo>
+  <Coronary>
+  </Coronary>
+  <Lesion LesionName="右冠近中远段">
+    <Operation OperationName="PCI">
+    </Operation>
+    <Operation OperationName="FFR">
+    </Operation>
+    <Operation OperationName="OCT">
+    </Operation>
+    <Operation OperationName="IVUS">
+    </Operation>
+  </Lesion>
+</body>

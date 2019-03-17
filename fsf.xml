@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<body>
+  <StudyInfo>AccessionNumber='DSA254' PatientID = 'T1802700787' PatientName = '董俊义' Sex = '' ExamineName = '' LesionCount = '0'</StudyInfo>
+  <DSAVideo>
+    <Image ImageFile="Image\1.dcm" />
+    <Image ImageFile="Image\2.dcm" />
+  </DSAVideo>
+  <Coronary>
+  </Coronary>
+</body>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="GBK" ?>
+
+<tree>
+	<node   Title="冠脉造影"  FieldType="Group">
+		<node  Title="各冠脉节段是否有明显狭窄"  FieldType="Group" FieldType="Text" FieldName1 =""  ComboName="各冠脉节段是否有明显狭窄" TableName=""></node>
+		<node name="冠脉基本信息">
+			<node name="冠脉优势型"></node>
+			<node name="畸形冠脉"></node>
+			<node name="是否有侧支血管"></node>
+			<node name="既往有无CABG史"></node>
+			<node name="曝光时间"></node>
+			<node name="术后诊断"></node>
+			<node name="并发症"></node>
+			<node name="闭合方法"></node>
+			<node name="术后制动"></node>
+			<node name="辐射剂量"></node>
+		</node>
+		<node  Title="病变信息"  FieldType="Group">
+			<node name="病变部位"></node>
+			<node name="狭窄程度"></node>
+			<node name="病变特点"></node>
+			<node name="TIMI血流"></node>
+			<node name="病变长度mm"></node>
+			<node name="病变分型"></node>
+			<node name="是否是犯罪血管"></node>
+			<node name="既往是否有介入治疗"></node>
+			<node name="既往支架植入情况"></node>
+			<node name="既往支架植入类型"></node>
+			<node name="本次处理意见"></node>
+		</node>
+		<node   Title="介入治疗情况"  FieldType="Group">
+			<node name="采用的术式"></node>
+			<node name="该部位介入是否成功"></node>
+			<node name="治疗后狭窄程度(%)"></node>
+			<node name="治疗后TIMI血流"></node>
+			<node name="该血管植入支架数量"></node>
+			<node name="术中并发症"></node>
+		</node>
+		<node  Title="IVUS"  FieldType="Group">
+			<node name="IVUS术前-管腔最小直径(mm)"></node>
+			<node name="IVUS术前-管腔最大直径(mm)"></node>
+			<node name="IVUS术前-管腔最小面积(mm2)"></node>
+			<node name="IVUS术前-EEM最小直径(mm)"></node>
+			<node name="IVUS术前-EEM最大直径(mm)"></node>
+			<node name="IVUS术前-EEM面积(mm2)"></node>
+			<node name="IVUS术前-斑块负荷(%)"></node>
+			<node name="IVUS术前-IVUS所见"></node>
+			<node name="IVUS术后-管腔最小直径(mm)"></node>
+			<node name="IVUS术后-管腔最大直径(mm)"></node>
+			<node name="IVUS术后-支架内/处理后最小面积(mm2)"></node>
+			<node name="IVUS术后-EEM最小直径(mm)"></node>
+			<node name="IVUS术后-EEM最大直径(mm)"></node>
+			<node name="IVUS术后-EEM面积(mm2)"></node>
+			<node name="IVUS术后-斑块负荷(%)"></node>
+			<node name="IVUS术后-IVUS所见"></node>
+		</node>
+		<node   Title="FFR"  FieldType="Group">
+			<node name="手术前-术前FFR"></node>
+			<node name="手术前-是否有跳跃"></node>
+			<node name="手术后-术后FFR"></node>				
+			<node name="手术后-是否有跳跃"></node>
+		</node>
+		<node   Title="OCT"  FieldType="Group">
+			<node name="OCT术前-管腔最小直径(mm)"></node>
+			<node name="OCT术前-管腔最大直径(mm)"></node>
+			<node name="OCT术前-管腔最小面积(mm2)"></node>
+			<node name="OCT术前-EEM最小直径(mm)"></node>
+			<node name="OCT术前-EEM最大直径(mm)"></node>
+			<node name="OCT术前-EEM面积(mm2)"></node>
+			<node name="OCT术前-斑块负荷(%)"></node>
+			<node name="OCT术前-OCT所见"></node>
+			<node name="OCT术后-管腔最小直径(mm)"></node>
+			<node name="OCT术后-管腔最大直径(mm)"></node>
+			<node name="OCT术后-支架内/处理后最小面积(mm2)"></node>
+			<node name="OCT术后-EEM最小直径(mm)"></node>
+			<node name="OCT术后-EEM最大直径(mm)"></node>
+			<node name="OCT术后-EEM面积(mm2)"></node>
+			<node name="OCT术后-斑块负荷(%)"></node>
+			<node name="OCT术后-OCT所见"></node>
+		</node>
+		<node   Title="旋磨"  FieldType="Group">
+			<node name="旋磨-磨头"></node>
+			<node name="旋磨-转数"></node>
+			<node name="旋磨-即刻效果"></node>
+		</node>
+		<node Title="介入器材"  FieldType="Group">
+			<node name="介入器材-使用耗材"></node>
+			<node name="介入器材-使用数量"></node>
+			<node name="介入器材-使用是否成功"></node>
+			<node name="介入器材-最小压力(atm)"></node>
+			<node name="介入器材-最大压力(atm)"></node>
+			<node name="介入器材-释放时间(s)"></node>
+			<node name="介入器材-备注"></node>
+		</node>
+	</node>
+
+</tree>

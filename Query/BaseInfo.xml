@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="GBK" ?>
+<tree>
+	<node Title="手术记录" FieldType="Group" >
+		<node Title="患者基本信息" FieldType="Group"  >
+			<node Title="姓名"  FieldType="Text" FieldName1 ="patientsName"  ComboName="" TableName="pub_Patients"  > </node>
+			<node Title="病案号" FieldType="Text" FieldName1 ="patientsID"  ComboName=""  TableName="pub_Patients" ></node>
+			<node Title="年龄" FieldType="Numerical" FieldName1 ="patientAge"  ComboName="" TableName="CisReport"  ></node>
+		</node>
+		<node Title="手术信息" FieldType="Group" >
+			<node Title="入院方式" FieldType="Text" FieldName1 ="AdmissionType"  ComboName="入院方式" TableName="CisReport" ></node>
+			<node Title="手术室" FieldType="Text" FieldName1 ="Lab"  ComboName="手术室" TableName="CisReport" ></node>
+			<node Title="手术名称" FieldType="Text" FieldName1 ="ExamineName"  ComboName="手术名称" TableName="CisReport" ></node>
+			<node Title="手术医生" FieldType="Text" FieldName1 ="ExamineDoctor"  ComboName="医生" TableName="CisReport" ></node>
+			<node Title="技师" FieldType="Text" FieldName1 ="Tech"  ComboName="技师" TableName="CisReport" ></node>
+			<node Title="医生" FieldType="Text" FieldName1 ="Physician"  ComboName="医生" TableName="CisReport" ></node>
+			<node Title="护士" FieldType="Text" FieldName1 ="Nurse"  ComboName="护士" TableName="CisReport" ></node>
+		</node>
+
+	</node>
+
+
+</tree>
+ 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GBK" ?>
+<tree>
+	<node Title="耗材记录" FieldType="Group" >
+		<node Title="耗材名称"  FieldType="Text" FieldName1 ="EquipmentName"  ComboName="" TableName="CisEquipment"  > </node>
+		<node Title="规格" FieldType="Text" FieldName1 ="EquipmentType"  ComboName=""  TableName="CisEquipment" ></node>
+		<node Title="品牌" FieldType="Text" FieldName1 ="Brand"  ComboName="" TableName="CisEquipment"  ></node>
+		<node Title="供应商"  FieldType="Text" FieldName1 ="Provider"  ComboName="" TableName="CisEquipment"  > </node>
+		<node Title="主码" FieldType="Text" FieldName1 ="MainbarCode"  ComboName=""  TableName="CisEquipment" ></node>
+		<node Title="类型" FieldType="Text" FieldName1 ="Category"  ComboName="耗材类型" TableName="CisEquipment"  ></node>
+
+	</node>
+
+
+</tree>
+ 

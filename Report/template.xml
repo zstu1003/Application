@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="GBK" ?>
+<tree>
+	<node name="医生模板">
+	<node name="心脏">
+		<node name=" 冠脉类">
+			<node name=" 冠脉造影">
+                                                    <template name ="正常冠脉造影报告"></template>
+                                                </node>
+			<node name=" PCI"></node>
+			<node name=" IUVS"></node>
+			<node name=" OCT"></node>
+			<node name=" 其他类"></node>
+		</node>
+		<node name="电生理类"></node>
+		<node name="起搏类"></node>
+		<node name="瓣膜类"></node>
+		<node name="其他类"></node>
+	</node>
+	<node name="脑血管">
+		<node name="a1"></node>
+		<node name="a2"></node>
+	</node>
+	<node name="外周血">
+		<node name="a1"></node>
+		<node name="a2"></node>
+	</node>
+
+	<node name="外周器">
+		<node name="a1"></node>
+		<node name="a2"></node>
+	</node>
+	</node>
+	<node name="护理模板">
+		<node name="正常护理模板">
+                                                    <template name ="正常护理报告"></template>
+		</node>
+
+	</node>
+
+</tree>
+ 
