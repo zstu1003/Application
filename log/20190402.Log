@@ -1,0 +1,69 @@
+2019-04-02 14:10:15: connect init:299
+2019-04-02 14:10:15: select UserCode, password, UserName,UserType FROM PUB_User where UserCode = '001'
+2019-04-02 14:10:15: success1
+2019-04-02 14:10:22: select UserCode, password, UserName,UserType FROM PUB_User where UserCode = 'ly'
+2019-04-02 14:10:22: success1
+2019-04-02 14:10:23: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','登录','','172.20.10.6',GetDate())
+2019-04-02 14:10:23: success1
+2019-04-02 14:10:23: select distinct m.*,p.UserCode from pub_Menu as m, pub_userPrivilege as p where  m.IsReport= 0 and m.menucode = p.menucode and p.usercode = 'ly' order by m.MenuCode asc 
+2019-04-02 14:10:23: success12
+2019-04-02 14:12:01: select * from pub_Dict where DictName='护理评估' and dictlevel=1
+2019-04-02 14:12:01: success1
+2019-04-02 14:12:01: select * from pub_Dict order by ParentDictCode asc,DictIndex asc 
+2019-04-02 14:12:01: success211
+2019-04-02 14:15:20: connect init:192
+2019-04-02 14:15:20: select UserCode, password, UserName,UserType FROM PUB_User where UserCode = 'ly'
+2019-04-02 14:15:20: success1
+2019-04-02 14:15:22: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','登录','','172.20.10.6',GetDate())
+2019-04-02 14:15:22: success1
+2019-04-02 14:15:22: select distinct m.*,p.UserCode from pub_Menu as m, pub_userPrivilege as p where  m.IsReport= 0 and m.menucode = p.menucode and p.usercode = 'ly' order by m.MenuCode asc 
+2019-04-02 14:15:22: success12
+2019-04-02 14:20:07: connect init:206
+2019-04-02 14:20:07: select UserCode, password, UserName,UserType FROM PUB_User where UserCode = 'ly'
+2019-04-02 14:20:07: success1
+2019-04-02 14:20:08: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','登录','','172.20.10.6',GetDate())
+2019-04-02 14:20:08: success1
+2019-04-02 14:20:08: select distinct m.*,p.UserCode from pub_Menu as m, pub_userPrivilege as p where  m.IsReport= 0 and m.menucode = p.menucode and p.usercode = 'ly' order by m.MenuCode asc 
+2019-04-02 14:20:08: success12
+2019-04-02 14:23:03: select * from pub_Dict where DictName='护理评估' and dictlevel=1
+2019-04-02 14:23:03: success1
+2019-04-02 14:23:03: select * from pub_Dict order by ParentDictCode asc,DictIndex asc 
+2019-04-02 14:23:03: success211
+2019-04-02 14:28:56: connect init:77
+2019-04-02 14:28:56: select UserCode, password, UserName,UserType FROM PUB_User where UserCode = 'Ly'
+2019-04-02 14:28:56: success1
+2019-04-02 14:28:57: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','登录','','172.20.10.6',GetDate())
+2019-04-02 14:28:57: success1
+2019-04-02 14:28:57: select distinct m.*,p.UserCode from pub_Menu as m, pub_userPrivilege as p where  m.IsReport= 0 and m.menucode = p.menucode and p.usercode = 'ly' order by m.MenuCode asc 
+2019-04-02 14:28:57: success12
+2019-04-02 14:29:02: select * from pub_Dict where DictName='护理评估' and dictlevel=1
+2019-04-02 14:29:02: success1
+2019-04-02 14:29:02: select * from pub_Dict order by ParentDictCode asc,DictIndex asc 
+2019-04-02 14:29:02: success211
+2019-04-02 14:29:04: select * from EquipmentGroup order by GroupIndex asc
+2019-04-02 14:29:04: success18
+2019-04-02 14:29:04: select * from EquipmentInner where GroupIndex = 1
+2019-04-02 14:29:04: success0
+2019-04-02 14:29:06: select * from EquipmentInner where GroupIndex = 4
+2019-04-02 14:29:06: success0
+2019-04-02 14:29:06: select * from EquipmentInner where GroupIndex = 7
+2019-04-02 14:29:06: success2
+2019-04-02 14:29:08: select * from  EquipmentType  where  EquipmentIndex= 34
+2019-04-02 14:29:08: success7
+2019-04-02 14:29:14: select EquipmentType.* from EquipmentType,EquipmentInner where EquipmentType.EquipmentIndex = EquipmentInner.EquipmentIndex and EquipmentType.EquipmentType = '11111'
+2019-04-02 14:29:14: 140
+2019-04-02 14:29:18: select EquipmentType.* from EquipmentType,EquipmentInner where EquipmentType.EquipmentIndex = EquipmentInner.EquipmentIndex and EquipmentType.EquipmentType = '啊'
+2019-04-02 14:29:18: Failed
+2019-04-02 14:29:18: Start Insert 
+2019-04-02 14:29:18: Insert into EquipmentType(EquipmentIndex,EquipmentType,MainBarCode) Values(@EquipmentIndex,@EquipmentType,@MainBarCode)
+2019-04-02 14:29:18: success1
+2019-04-02 14:29:18: select * from  EquipmentType  where  EquipmentIndex= 34
+2019-04-02 14:29:18: success8
+2019-04-02 14:29:20: delete from EquipmentType where detailIndex='152'
+2019-04-02 14:29:20: success1
+2019-04-02 14:29:20: select * from  EquipmentType  where  EquipmentIndex= 34
+2019-04-02 14:29:20: success7
+2019-04-02 14:29:22: delete from EquipmentType where detailIndex='140'
+2019-04-02 14:29:22: success1
+2019-04-02 14:29:22: select * from  EquipmentType  where  EquipmentIndex= 34
+2019-04-02 14:29:22: success6

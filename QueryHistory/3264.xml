@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GBK" ?>
+<tree>
+   <node FieldName="狭窄程度"  FieldType="NumericalRange" FieldName1 ="XzcdValue1" FieldName2="XzcdValue2" Tablename="pub_Patients" ValueType="NumericalRange" Value1="" Value2=""> </node>
+   <node FieldName="狭窄程度"  FieldType="NumericalRange" FieldName1 ="XzcdValue1" FieldName2="XzcdValue2" ComboName="" Tablename="pub_Patients"  > </node>
+
+
+
+
+</tree>
+ 

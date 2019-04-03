@@ -1,0 +1,63 @@
+2019-03-22 15:19:18: connect init:250
+2019-03-22 15:19:18: select UserCode, password, UserName,UserType FROM PUB_User where UserCode = 'cxc'
+2019-03-22 15:19:18: success1
+2019-03-22 15:19:18: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('cxc','陈希超','登录','','192.168.0.104',GetDate())
+2019-03-22 15:19:18: success1
+2019-03-22 15:19:19: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='ssjbxx_Lab'
+2019-03-22 15:19:19: success6
+2019-03-22 15:19:19: select UserName,UserType from pub_User 
+2019-03-22 15:19:19: success32
+2019-03-22 15:19:19: select a.StudyDate,b.PatientsName ,b.PatientsID,b.PatientsSex ,a.ExamineName ,a.ExamineDoctor ,a.accessionNumber ,a.Lab ,a.RegDate ,(case a.status when 0 then '未开始' when 1 then '进行中' when 2 then '已完成' end) as myStatus,a.ImportantItem from CISReport a,pub_patients b where a.PatientIndex=b.PatientsIndex and a.StudyDate between '2019-03-22 00:00:00' and '2019-03-22 23:59:59'
+2019-03-22 15:19:19: success1
+2019-03-22 15:19:22: select a.StudyDate,b.PatientsName ,b.PatientsID,b.PatientsSex ,a.ExamineName ,a.ExamineDoctor ,a.accessionNumber ,a.Lab ,a.RegDate ,(case a.status when 0 then '未开始' when 1 then '进行中' when 2 then '已完成' end) as myStatus,a.ImportantItem from CISReport a,pub_patients b where a.PatientIndex=b.PatientsIndex and a.StudyDate between '2019-02-22 00:00:00' and '2019-03-22 23:59:59'
+2019-03-22 15:19:22: success44
+2019-03-22 15:19:24: select c.*,p.*,CAST(p.PatientsDOB as  datetime) as Birthday from CISReport as c ,pub_patients as p  where c.patientIndex=p.PatientsIndex and c.AccessionNumber = 'DSA102'
+2019-03-22 15:19:24: success1
+2019-03-22 15:19:24: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('cxc','陈希超','患者信息','DSA102','192.168.0.104',GetDate())
+2019-03-22 15:19:24: success1
+2019-03-22 15:19:26: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('cxc','陈希超','护理评估','DSA102','192.168.0.104',GetDate())
+2019-03-22 15:19:26: success1
+2019-03-22 15:19:26: select * from pub_Dict where DictAbbr = 'hlpg' and DictLevel=1 and ParentDictcode>0 order by ParentDictCode asc,DictIndex asc 
+2019-03-22 15:19:26: success1
+2019-03-22 15:19:26: select * from pub_Dict order by ParentDictCode asc,DictIndex asc 
+2019-03-22 15:19:26: success208
+2019-03-22 15:19:26: select * from CisReport where status=2 and  AccessionNumber = 'DSA102'
+2019-03-22 15:19:26: success0
+2019-03-22 15:19:26: select m.*,p.UserCode from pub_Menu as m ,pub_userPrivilege as p where m.menucode = p.menucode and p.usercode = 'cxc' and m.MenuName='护理评估'
+2019-03-22 15:19:26: success1
+2019-03-22 15:19:26:  select * from studyOperateList where Leavedate is  null and OperateType = '编辑' and  AccessionNumber = 'DSA102' and ModuleName='护理评估' and IPAddress='192.168.0.104'
+2019-03-22 15:19:26: success0
+2019-03-22 15:19:26: insert into StudyOperateList(UserCode,ModuleName,AccessionNumber,IPAddress,EnterDate,OperateType,SoftNodeID,SoftNodeName) values('cxc','护理评估','DSA102','192.168.0.104',GetDate(),'编辑','CIS03','3号导管室')
+2019-03-22 15:19:26: success1
+2019-03-22 15:19:26: select *  from CISReportDetail where FieldAbbr like'hlpg%' and AccessionNumber='DSA102' order by RecordDate asc
+2019-03-22 15:19:26: success5
+2019-03-22 15:19:28: select * from pub_Dict where ParentDictCode=156
+2019-03-22 15:19:28: success1
+2019-03-22 15:19:28: select * from pub_Dict where ParentDictCode=238
+2019-03-22 15:19:28: success1
+2019-03-22 15:19:28: select * from pub_Dict where ParentDictCode=241
+2019-03-22 15:19:28: success1
+2019-03-22 15:19:28: select * from pub_Dict where ParentDictCode=244
+2019-03-22 15:19:28: success1
+2019-03-22 15:19:28: select * from pub_Dict where ParentDictCode=245
+2019-03-22 15:19:28: success0
+2019-03-22 15:19:39: select * from pub_Dict where ParentDictCode=156
+2019-03-22 15:19:39: success1
+2019-03-22 15:19:39: select * from pub_Dict where ParentDictCode=238
+2019-03-22 15:19:39: success1
+2019-03-22 15:19:39: select * from pub_Dict where ParentDictCode=241
+2019-03-22 15:19:39: success1
+2019-03-22 15:19:39: select * from pub_Dict where ParentDictCode=244
+2019-03-22 15:19:39: success1
+2019-03-22 15:19:39: select * from pub_Dict where ParentDictCode=245
+2019-03-22 15:19:39: success0
+2019-03-22 15:19:51: update StudyOperateList set LeaveDate = Getdate() where LeaveDate is null and   UserCode='cxc' and AccessionNumber='DSA102' and IPAddress='192.168.0.104' and ModuleName='护理评估'
+2019-03-22 15:19:51: success1
+2019-03-22 15:19:51: update StudyOperateList set LeaveDate = Getdate() where LeaveDate is null and  UserCode='cxc' and ModuleName='护理评估' and AccessionNumber='DSA102'
+2019-03-22 15:19:51: success0
+2019-03-22 15:19:51: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('cxc','陈希超','患者信息退出','DSA102','192.168.0.104',GetDate())
+2019-03-22 15:19:51: success1
+2019-03-22 15:19:52: update StudyOperateList set LeaveDate = Getdate() where leaveDate is null and  UserCode='cxc' and IPAddress='192.168.0.104'
+2019-03-22 15:19:52: success0
+2019-03-22 15:19:53: update StudyOperateList set LeaveDate = Getdate() where leaveDate is null and  UserCode='cxc' and IPAddress='192.168.0.104'
+2019-03-22 15:19:53: success0

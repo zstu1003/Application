@@ -1,0 +1,15 @@
+2019-04-03 10:03:51: connect init:121
+2019-04-03 10:03:51: select UserCode, password, UserName,UserType FROM PUB_User where UserCode = 'ly'
+2019-04-03 10:03:51: success1
+2019-04-03 10:03:52: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','登录','','10.31.206.86',GetDate())
+2019-04-03 10:03:52: success1
+2019-04-03 10:03:52: select distinct m.*,p.UserCode from pub_Menu as m, pub_userPrivilege as p where  m.IsReport= 0 and m.menucode = p.menucode and p.usercode = 'ly' order by m.MenuCode asc 
+2019-04-03 10:03:52: success12
+2019-04-03 10:03:54: select * from EquipmentGroup order by GroupIndex asc
+2019-04-03 10:03:54: success18
+2019-04-03 10:03:54: select * from EquipmentInner where GroupIndex = 1
+2019-04-03 10:03:54: success0
+2019-04-03 10:03:56: select * from ComboData order by ComboDataIndex asc
+2019-04-03 10:03:56: success58
+2019-04-03 10:03:56: select distinct case ComboType when -1 then '分类' when 0 then '单选' when 1 then '多选' end from ComboData
+2019-04-03 10:03:56: success4

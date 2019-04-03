@@ -1,0 +1,128 @@
+2019-03-28 15:10:52: connect init:170
+2019-03-28 15:10:53: select UserCode, password, UserName,UserType FROM PUB_User where UserCode = 'ly'
+2019-03-28 15:10:53: success1
+2019-03-28 15:10:53: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','登录','','192.168.1.134',GetDate())
+2019-03-28 15:10:53: success1
+2019-03-28 15:10:55: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='ssjbxx_Lab'
+2019-03-28 15:10:55: success6
+2019-03-28 15:10:55: select UserName,UserType from pub_User 
+2019-03-28 15:10:55: success32
+2019-03-28 15:10:55: select a.StudyDate,b.PatientsName ,b.PatientsID,b.PatientsSex ,a.ExamineName ,a.ExamineDoctor ,a.accessionNumber ,a.Lab ,a.RegDate ,(case a.status when 0 then '未开始' when 1 then '进行中' when 2 then '已完成' end) as myStatus,a.ImportantItem from CISReport a,pub_patients b where a.PatientIndex=b.PatientsIndex and a.StudyDate between '2019-03-28 00:00:00' and '2019-03-28 23:59:59'
+2019-03-28 15:10:55: success0
+2019-03-28 15:11:08: connect init:262
+2019-03-28 15:11:08: select UserCode, password, UserName,UserType FROM PUB_User where UserCode = 'ly'
+2019-03-28 15:11:08: success1
+2019-03-28 15:11:09: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','登录','','192.168.1.134',GetDate())
+2019-03-28 15:11:09: success1
+2019-03-28 15:11:10: select distinct m.*,p.UserCode from pub_Menu as m, pub_userPrivilege as p where  m.IsReport= 0 and m.menucode = p.menucode and p.usercode = 'ly' order by m.MenuCode asc 
+2019-03-28 15:11:10: success12
+2019-03-28 15:11:17: select * from ComboData order by ComboDataIndex asc
+2019-03-28 15:11:17: success58
+2019-03-28 15:11:18: select distinct case ComboType when -1 then '分类' when 0 then '单选' when 1 then '多选' end from ComboData
+2019-03-28 15:11:18: success4
+2019-03-28 15:11:28: select * from pub_Dict where DictName='护理评估' and dictlevel=1
+2019-03-28 15:11:28: success1
+2019-03-28 15:11:28: select * from pub_Dict order by ParentDictCode asc,DictIndex asc 
+2019-03-28 15:11:28: success208
+2019-03-28 15:11:31: select * from EquipmentGroup order by GroupIndex asc
+2019-03-28 15:11:31: success18
+2019-03-28 15:11:31: select * from EquipmentInner where GroupIndex = 1
+2019-03-28 15:11:31: success0
+2019-03-28 15:11:38: select *,load='导入历史',Del='删除历史' from QueryHistory where usercode='ly' order by RecordDate desc
+2019-03-28 15:11:38: success0
+2019-03-28 15:11:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='CoronaryDetail_bbbw' order by b.ComboValueOrder asc
+2019-03-28 15:11:52: success0
+2019-03-28 15:12:04: select * from ComboData order by ComboDataIndex asc
+2019-03-28 15:12:04: success58
+2019-03-28 15:12:04: select distinct case ComboType when -1 then '分类' when 0 then '单选' when 1 then '多选' end from ComboData
+2019-03-28 15:12:04: success4
+2019-03-28 15:12:08: select case ComboType when -1 then '分类' when 0 then '单选' when 1 then '多选' end from ComboData where ComboDataIndex = '18'
+2019-03-28 15:12:08: success1
+2019-03-28 15:12:08: update ComboData set ComboType ='0' where ComboDataIndex = '18'
+2019-03-28 15:12:08: success1
+2019-03-28 15:12:08: select ComboDataDetail.* from ComboDataDetail,ComboData where ComboDataDetail.ComboDataIndex=ComboData.ComboDataIndex and ComboData.ComboDataIndex= '18' ORDER BY ComboValueOrder asc
+2019-03-28 15:12:08: success61
+2019-03-28 15:12:35: select *,load='导入历史',Del='删除历史' from QueryHistory where usercode='ly' order by RecordDate desc
+2019-03-28 15:12:35: success0
+2019-03-28 15:12:42: select * from pub_Dict where  ParentDictcode=25 and DictAbbr='yyjl' order by ParentDictCode asc,DictIndex asc 
+2019-03-28 15:12:42: success1
+2019-03-28 15:12:42: select * from pub_Dict order by ParentDictCode asc,DictIndex asc 
+2019-03-28 15:12:42: success208
+2019-03-28 15:12:57: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_gmjd' order by b.ComboValueOrder asc
+2019-03-28 15:12:57: success0
+2019-03-28 15:18:10: connect init:113
+2019-03-28 15:18:10: select UserCode, password, UserName,UserType FROM PUB_User where UserCode = 'ly'
+2019-03-28 15:18:11: success1
+2019-03-28 15:18:12: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','登录','','192.168.1.134',GetDate())
+2019-03-28 15:18:12: success1
+2019-03-28 15:18:12: select distinct m.*,p.UserCode from pub_Menu as m, pub_userPrivilege as p where  m.IsReport= 0 and m.menucode = p.menucode and p.usercode = 'ly' order by m.MenuCode asc 
+2019-03-28 15:18:12: success12
+2019-03-28 15:18:15: select * from ComboData order by ComboDataIndex asc
+2019-03-28 15:18:15: success58
+2019-03-28 15:18:15: select distinct case ComboType when -1 then '分类' when 0 then '单选' when 1 then '多选' end from ComboData
+2019-03-28 15:18:15: success4
+2019-03-28 15:18:23: select case ComboType when -1 then '分类' when 0 then '单选' when 1 then '多选' end from ComboData where ComboDataIndex = '38'
+2019-03-28 15:18:23: success1
+2019-03-28 15:18:23: update ComboData set ComboType ='0' where ComboDataIndex = '38'
+2019-03-28 15:18:23: success1
+2019-03-28 15:18:23: select ComboDataDetail.* from ComboDataDetail,ComboData where ComboDataDetail.ComboDataIndex=ComboData.ComboDataIndex and ComboData.ComboDataIndex= '38' ORDER BY ComboValueOrder asc
+2019-03-28 15:18:23: success3
+2019-03-28 15:18:24: select case ComboType when -1 then '分类' when 0 then '单选' when 1 then '多选' end from ComboData where ComboDataIndex = '1'
+2019-03-28 15:18:24: success1
+2019-03-28 15:18:24: select ComboDataDetail.* from ComboDataDetail,ComboData where ComboDataDetail.ComboDataIndex=ComboData.ComboDataIndex and ComboData.ComboDataIndex= '1' ORDER BY ComboValueOrder asc
+2019-03-28 15:18:24: success6
+2019-03-28 15:18:25: select case ComboType when -1 then '分类' when 0 then '单选' when 1 then '多选' end from ComboData where ComboDataIndex = '41'
+2019-03-28 15:18:25: success1
+2019-03-28 15:18:25: update ComboData set ComboType ='-2' where ComboDataIndex = '41'
+2019-03-28 15:18:25: success1
+2019-03-28 15:18:25: select ComboDataDetail.* from ComboDataDetail,ComboData where ComboDataDetail.ComboDataIndex=ComboData.ComboDataIndex and ComboData.ComboDataIndex= '41' ORDER BY ComboValueOrder asc
+2019-03-28 15:18:25: success0
+2019-03-28 15:18:25: select case ComboType when -1 then '分类' when 0 then '单选' when 1 then '多选' end from ComboData where ComboDataIndex = '3'
+2019-03-28 15:18:25: success1
+2019-03-28 15:18:25: update ComboData set ComboType ='1' where ComboDataIndex = '3'
+2019-03-28 15:18:25: success1
+2019-03-28 15:18:25: select ComboDataDetail.* from ComboDataDetail,ComboData where ComboDataDetail.ComboDataIndex=ComboData.ComboDataIndex and ComboData.ComboDataIndex= '3' ORDER BY ComboValueOrder asc
+2019-03-28 15:18:25: success5
+2019-03-28 15:18:25: select case ComboType when -1 then '分类' when 0 then '单选' when 1 then '多选' end from ComboData where ComboDataIndex = '2'
+2019-03-28 15:18:25: success1
+2019-03-28 15:18:25: update ComboData set ComboType ='0' where ComboDataIndex = '2'
+2019-03-28 15:18:25: success1
+2019-03-28 15:18:25: select ComboDataDetail.* from ComboDataDetail,ComboData where ComboDataDetail.ComboDataIndex=ComboData.ComboDataIndex and ComboData.ComboDataIndex= '2' ORDER BY ComboValueOrder asc
+2019-03-28 15:18:25: success3
+2019-03-28 15:18:26: select case ComboType when -1 then '分类' when 0 then '单选' when 1 then '多选' end from ComboData where ComboDataIndex = '4'
+2019-03-28 15:18:26: success1
+2019-03-28 15:18:26: select ComboDataDetail.* from ComboDataDetail,ComboData where ComboDataDetail.ComboDataIndex=ComboData.ComboDataIndex and ComboData.ComboDataIndex= '4' ORDER BY ComboValueOrder asc
+2019-03-28 15:18:26: success2
+2019-03-28 15:18:26: select case ComboType when -1 then '分类' when 0 then '单选' when 1 then '多选' end from ComboData where ComboDataIndex = '6'
+2019-03-28 15:18:26: success1
+2019-03-28 15:18:26: select ComboDataDetail.* from ComboDataDetail,ComboData where ComboDataDetail.ComboDataIndex=ComboData.ComboDataIndex and ComboData.ComboDataIndex= '6' ORDER BY ComboValueOrder asc
+2019-03-28 15:18:26: success6
+2019-03-28 15:18:26: select case ComboType when -1 then '分类' when 0 then '单选' when 1 then '多选' end from ComboData where ComboDataIndex = '10'
+2019-03-28 15:18:26: success1
+2019-03-28 15:18:26: select ComboDataDetail.* from ComboDataDetail,ComboData where ComboDataDetail.ComboDataIndex=ComboData.ComboDataIndex and ComboData.ComboDataIndex= '10' ORDER BY ComboValueOrder asc
+2019-03-28 15:18:26: success2
+2019-03-28 15:18:27: select case ComboType when -1 then '分类' when 0 then '单选' when 1 then '多选' end from ComboData where ComboDataIndex = '17'
+2019-03-28 15:18:27: success1
+2019-03-28 15:18:27: select ComboDataDetail.* from ComboDataDetail,ComboData where ComboDataDetail.ComboDataIndex=ComboData.ComboDataIndex and ComboData.ComboDataIndex= '17' ORDER BY ComboValueOrder asc
+2019-03-28 15:18:27: success4
+2019-03-28 15:18:29: select *,load='导入历史',Del='删除历史' from QueryHistory where usercode='ly' order by RecordDate desc
+2019-03-28 15:18:29: success0
+2019-03-28 15:18:34: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_jxgm' order by b.ComboValueOrder asc
+2019-03-28 15:18:34: success5
+2019-03-28 15:18:43: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_gmysx' order by b.ComboValueOrder asc
+2019-03-28 15:18:43: success3
+2019-03-28 15:18:53: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='CoronaryDetail_bbbw' order by b.ComboValueOrder asc
+2019-03-28 15:18:53: success0
+2019-03-28 15:19:08: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_zhidong' order by b.ComboValueOrder asc
+2019-03-28 15:19:08: success3
+2019-03-28 15:28:03: connect init:66
+2019-03-28 15:28:03: select UserCode, password, UserName,UserType FROM PUB_User where UserCode = 'ly'
+2019-03-28 15:28:03: success1
+2019-03-28 15:28:04: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','登录','','192.168.1.134',GetDate())
+2019-03-28 15:28:04: success1
+2019-03-28 15:28:05: select distinct m.*,p.UserCode from pub_Menu as m, pub_userPrivilege as p where  m.IsReport= 0 and m.menucode = p.menucode and p.usercode = 'ly' order by m.MenuCode asc 
+2019-03-28 15:28:05: success12
+2019-03-28 15:28:07: select *,load='导入历史',Del='删除历史' from QueryHistory where usercode='ly' order by RecordDate desc
+2019-03-28 15:28:07: success0
+2019-03-28 15:28:13: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_xgxxlr_bbbw' order by b.ComboValueOrder asc
+2019-03-28 15:28:13: success61

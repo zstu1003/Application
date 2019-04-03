@@ -1,0 +1,753 @@
+2019-03-29 10:05:40: connect init:171
+2019-03-29 10:05:40: select UserCode, password, UserName,UserType FROM PUB_User where UserCode = 'ly'
+2019-03-29 10:05:40: success1
+2019-03-29 10:05:41: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','登录','','192.168.1.109',GetDate())
+2019-03-29 10:05:41: success1
+2019-03-29 10:05:43: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='ssjbxx_Lab'
+2019-03-29 10:05:43: success6
+2019-03-29 10:05:43: select UserName,UserType from pub_User 
+2019-03-29 10:05:43: success32
+2019-03-29 10:05:43: select a.StudyDate,b.PatientsName ,b.PatientsID,b.PatientsSex ,a.ExamineName ,a.ExamineDoctor ,a.accessionNumber ,a.Lab ,a.RegDate ,(case a.status when 0 then '未开始' when 1 then '进行中' when 2 then '已完成' end) as myStatus,a.ImportantItem from CISReport a,pub_patients b where a.PatientIndex=b.PatientsIndex and a.StudyDate between '2019-03-29 00:00:00' and '2019-03-29 23:59:59'
+2019-03-29 10:05:43: success0
+2019-03-29 10:05:45: select a.StudyDate,b.PatientsName ,b.PatientsID,b.PatientsSex ,a.ExamineName ,a.ExamineDoctor ,a.accessionNumber ,a.Lab ,a.RegDate ,(case a.status when 0 then '未开始' when 1 then '进行中' when 2 then '已完成' end) as myStatus,a.ImportantItem from CISReport a,pub_patients b where a.PatientIndex=b.PatientsIndex and a.StudyDate between '2019-03-29 00:00:00' and '2019-03-29 23:59:59'
+2019-03-29 10:05:45: success0
+2019-03-29 10:05:47: select a.StudyDate,b.PatientsName ,b.PatientsID,b.PatientsSex ,a.ExamineName ,a.ExamineDoctor ,a.accessionNumber ,a.Lab ,a.RegDate ,(case a.status when 0 then '未开始' when 1 then '进行中' when 2 then '已完成' end) as myStatus,a.ImportantItem from CISReport a,pub_patients b where a.PatientIndex=b.PatientsIndex and a.StudyDate between '2019-02-28 00:00:00' and '2019-03-29 23:59:59'
+2019-03-29 10:05:47: success45
+2019-03-29 10:05:49: select c.*,p.*,CAST(p.PatientsDOB as  datetime) as Birthday from CISReport as c ,pub_patients as p  where c.patientIndex=p.PatientsIndex and c.AccessionNumber = 'DSA256'
+2019-03-29 10:05:49: success1
+2019-03-29 10:05:49: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','患者信息','DSA256','192.168.1.109',GetDate())
+2019-03-29 10:05:49: success1
+2019-03-29 10:05:52: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','冠脉造影','DSA256','192.168.1.109',GetDate())
+2019-03-29 10:05:52: success1
+2019-03-29 10:05:52: select * from CisReport where status=2 and  AccessionNumber = 'DSA256'
+2019-03-29 10:05:52: Failed
+2019-03-29 10:05:52: select m.*,p.UserCode from pub_Menu as m , pub_userPrivilege as p where m.menucode = p.menucode and p.usercode = 'ly' and m.MenuName='冠脉造影'
+2019-03-29 10:05:52: 203
+2019-03-29 10:05:52:  select * from studyOperateList where Leavedate is  null and OperateType = '编辑' and  AccessionNumber = 'DSA256' and ModuleName='冠脉造影'
+2019-03-29 10:05:52: Failed
+2019-03-29 10:05:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jrzlqk_cyss' order by b.ComboValueOrder asc
+2019-03-29 10:05:52: success9
+2019-03-29 10:05:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jrzlqk_bwjr' order by b.ComboValueOrder asc
+2019-03-29 10:05:52: success2
+2019-03-29 10:05:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jrzlqk_zlhTIMI' order by b.ComboValueOrder asc
+2019-03-29 10:05:52: success4
+2019-03-29 10:05:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jrzlqk_zrzj' order by b.ComboValueOrder asc
+2019-03-29 10:05:52: success8
+2019-03-29 10:05:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jrzlqk_szbfz' order by b.ComboValueOrder asc
+2019-03-29 10:05:52: success15
+2019-03-29 10:05:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_FFR_ty1' order by b.ComboValueOrder asc
+2019-03-29 10:05:52: success9
+2019-03-29 10:05:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_FFR_ty2' order by b.ComboValueOrder asc
+2019-03-29 10:05:52: success9
+2019-03-29 10:05:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_IVUS_IVUSsj1' order by b.ComboValueOrder asc
+2019-03-29 10:05:52: success12
+2019-03-29 10:05:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_IVUS_IVUSsj2' order by b.ComboValueOrder asc
+2019-03-29 10:05:52: success7
+2019-03-29 10:05:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_OCT_OCTsj1' order by b.ComboValueOrder asc
+2019-03-29 10:05:52: success12
+2019-03-29 10:05:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_OCT_OCTsj2' order by b.ComboValueOrder asc
+2019-03-29 10:05:52: success7
+2019-03-29 10:05:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_gmysx' order by b.ComboValueOrder asc
+2019-03-29 10:05:52: success3
+2019-03-29 10:05:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_jxgm' order by b.ComboValueOrder asc
+2019-03-29 10:05:52: success5
+2019-03-29 10:05:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_shzd' order by b.ComboValueOrder asc
+2019-03-29 10:05:52: success6
+2019-03-29 10:05:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_bhff' order by b.ComboValueOrder asc
+2019-03-29 10:05:52: success5
+2019-03-29 10:05:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_bfz' order by b.ComboValueOrder asc
+2019-03-29 10:05:52: success3
+2019-03-29 10:05:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_czxg' order by b.ComboValueOrder asc
+2019-03-29 10:05:52: success2
+2019-03-29 10:05:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_zhidong' order by b.ComboValueOrder asc
+2019-03-29 10:05:52: success3
+2019-03-29 10:05:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_cabgs' order by b.ComboValueOrder asc
+2019-03-29 10:05:52: success5
+2019-03-29 10:05:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_xm_mtdx' order by b.ComboValueOrder asc
+2019-03-29 10:05:52: success4
+2019-03-29 10:05:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_xm_jkxg' order by b.ComboValueOrder asc
+2019-03-29 10:05:52: success2
+2019-03-29 10:05:52: select  * from Coronary where AccessionNumber = 'DSA256'
+2019-03-29 10:05:52: 40
+2019-03-29 10:05:52: select  * from Coronary where AccessionNumber = 'DSA256'
+2019-03-29 10:05:52: success1
+2019-03-29 10:05:52: select *  from PACSPrint where AccessionNumber='DSA256' order by LesionName
+2019-03-29 10:05:52: success0
+2019-03-29 10:05:52: select *,(case xzcd when '区间' then  CAST(XzcdValue1 as varchar(4))+'-'+CAST(XzcdValue2 as varchar(4)) else  CAST(XzcdValue1 as varchar(4))  end ) as NewXzcd,(case Bbcd when '区间' then  CAST(BbcdValue1 as varchar(4))+'-'+CAST(BbcdValue2 as varchar(4)) else  CAST(BbcdValue1 as varchar(4))  end ) as NewBbcd   from CoronaryDetail where CoronaryIndex=40
+2019-03-29 10:05:52: success2
+2019-03-29 10:05:52: select DetailIndex,(Category+' '+EquipmentName+' '+EquipmentType+' '+Brand) as Equipment,number,sysfcg,cast(zxyl as varchar(12)) as zxyl,cast(zdyl as varchar(12)) as zdyl ,cast(sfsj as varchar(12)) as sfsj,bz from CoronaryEquipmentDetail  where CoronaryDetailIndex =86  and (Category like '%球囊%'  or Category like '%支架%' )  union  select DetailIndex,(Category + ' ' + EquipmentName + ' ' +EquipmentType + ' ' + Brand) as Equipment,number,sysfcg,zxyl='/ ',zdyl='/',sfsj='/',bz from CoronaryEquipmentDetail  where CoronaryDetailIndex = 86 and not (Category like '%球囊%')  and not (Category like '%支架%')  
+2019-03-29 10:05:52: success1
+2019-03-29 10:05:52: select * from CoronaryInterveneDetail where  CoronaryDetailIndex =86
+2019-03-29 10:05:52: success1
+2019-03-29 10:05:52: select * from CoronaryFFRDetail where  CoronaryDetailIndex =86
+2019-03-29 10:05:52: success1
+2019-03-29 10:05:52: select * from CoronaryIVUSDetail where  CoronaryDetailIndex =86
+2019-03-29 10:05:52: success0
+2019-03-29 10:05:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_IVUS_IVUSsj1' order by b.ComboValueOrder asc
+2019-03-29 10:05:52: success12
+2019-03-29 10:05:52: select * from CoronaryOCTDetail where  CoronaryDetailIndex =86
+2019-03-29 10:05:52: success0
+2019-03-29 10:05:52: select * from CoronaryROTADetail where  CoronaryDetailIndex =86
+2019-03-29 10:05:52: success0
+2019-03-29 10:05:52: select DetailIndex,(Category+' '+EquipmentName+' '+EquipmentType+' '+Brand) as Equipment,number,sysfcg,cast(zxyl as varchar(12)) as zxyl,cast(zdyl as varchar(12)) as zdyl ,cast(sfsj as varchar(12)) as sfsj,bz from CoronaryEquipmentDetail  where CoronaryDetailIndex =86  and (Category like '%球囊%'  or Category like '%支架%' )  union  select DetailIndex,(Category + ' ' + EquipmentName + ' ' +EquipmentType + ' ' + Brand) as Equipment,number,sysfcg,zxyl='/ ',zdyl='/',sfsj='/',bz from CoronaryEquipmentDetail  where CoronaryDetailIndex = 86 and not (Category like '%球囊%')  and not (Category like '%支架%')  
+2019-03-29 10:05:52: success1
+2019-03-29 10:05:52: select * from CoronaryInterveneDetail where  CoronaryDetailIndex =86
+2019-03-29 10:05:52: success1
+2019-03-29 10:05:52: select * from CoronaryFFRDetail where  CoronaryDetailIndex =86
+2019-03-29 10:05:52: success1
+2019-03-29 10:05:52: select * from CoronaryIVUSDetail where  CoronaryDetailIndex =86
+2019-03-29 10:05:52: success0
+2019-03-29 10:05:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_IVUS_IVUSsj1' order by b.ComboValueOrder asc
+2019-03-29 10:05:52: success12
+2019-03-29 10:05:52: select * from CoronaryOCTDetail where  CoronaryDetailIndex =86
+2019-03-29 10:05:52: success0
+2019-03-29 10:05:52: select * from CoronaryROTADetail where  CoronaryDetailIndex =86
+2019-03-29 10:05:52: success0
+2019-03-29 10:05:52: insert into StudyOperateList(UserCode,ModuleName,AccessionNumber,IPAddress,EnterDate,OperateType,SoftNodeID,SoftNodeName) values('ly','冠脉造影','DSA256','192.168.1.109',GetDate(),'编辑','CIS03','3号导管室')
+2019-03-29 10:05:52: success1
+2019-03-29 10:05:52: select DetailIndex,(Category+' '+EquipmentName+' '+EquipmentType+' '+Brand) as Equipment,number,sysfcg,cast(zxyl as varchar(12)) as zxyl,cast(zdyl as varchar(12)) as zdyl ,cast(sfsj as varchar(12)) as sfsj,bz from CoronaryEquipmentDetail  where CoronaryDetailIndex =86  and (Category like '%球囊%'  or Category like '%支架%' )  union  select DetailIndex,(Category + ' ' + EquipmentName + ' ' +EquipmentType + ' ' + Brand) as Equipment,number,sysfcg,zxyl='/ ',zdyl='/',sfsj='/',bz from CoronaryEquipmentDetail  where CoronaryDetailIndex = 86 and not (Category like '%球囊%')  and not (Category like '%支架%')  
+2019-03-29 10:05:52: success1
+2019-03-29 10:05:52: select * from CoronaryInterveneDetail where  CoronaryDetailIndex =86
+2019-03-29 10:05:52: success1
+2019-03-29 10:05:52: select * from CoronaryFFRDetail where  CoronaryDetailIndex =86
+2019-03-29 10:05:52: success1
+2019-03-29 10:05:52: select * from CoronaryIVUSDetail where  CoronaryDetailIndex =86
+2019-03-29 10:05:52: success0
+2019-03-29 10:05:52: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_IVUS_IVUSsj1' order by b.ComboValueOrder asc
+2019-03-29 10:05:52: success12
+2019-03-29 10:05:52: select * from CoronaryOCTDetail where  CoronaryDetailIndex =86
+2019-03-29 10:05:52: success0
+2019-03-29 10:05:52: select * from CoronaryROTADetail where  CoronaryDetailIndex =86
+2019-03-29 10:05:52: success0
+2019-03-29 10:05:58: select DetailIndex,(Category+' '+EquipmentName+' '+EquipmentType+' '+Brand) as Equipment,number,sysfcg,cast(zxyl as varchar(12)) as zxyl,cast(zdyl as varchar(12)) as zdyl ,cast(sfsj as varchar(12)) as sfsj,bz from CoronaryEquipmentDetail  where CoronaryDetailIndex =86  and (Category like '%球囊%'  or Category like '%支架%' )  union  select DetailIndex,(Category + ' ' + EquipmentName + ' ' +EquipmentType + ' ' + Brand) as Equipment,number,sysfcg,zxyl='/ ',zdyl='/',sfsj='/',bz from CoronaryEquipmentDetail  where CoronaryDetailIndex = 86 and not (Category like '%球囊%')  and not (Category like '%支架%')  
+2019-03-29 10:05:58: success1
+2019-03-29 10:05:58: select * from CoronaryInterveneDetail where  CoronaryDetailIndex =86
+2019-03-29 10:05:58: success1
+2019-03-29 10:05:58: select * from CoronaryFFRDetail where  CoronaryDetailIndex =86
+2019-03-29 10:05:58: success1
+2019-03-29 10:05:58: select * from CoronaryIVUSDetail where  CoronaryDetailIndex =86
+2019-03-29 10:05:58: success0
+2019-03-29 10:05:58: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_IVUS_IVUSsj1' order by b.ComboValueOrder asc
+2019-03-29 10:05:58: success12
+2019-03-29 10:05:58: select * from CoronaryOCTDetail where  CoronaryDetailIndex =86
+2019-03-29 10:05:58: success0
+2019-03-29 10:05:58: select * from CoronaryROTADetail where  CoronaryDetailIndex =86
+2019-03-29 10:05:58: success0
+2019-03-29 10:05:59: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','图像查看','DSA256','192.168.1.109',GetDate())
+2019-03-29 10:05:59: success1
+2019-03-29 10:05:59: select cd.* from CoronaryDetail as cd,Coronary as c where cd.CoronaryIndex=c.CoronaryIndex and c.AccessionNumber='DSA256'
+2019-03-29 10:05:59: success2
+2019-03-29 10:05:59: select * from PACSPrint where AccessionNumber='DSA256' and len(LesionName)<1 
+2019-03-29 10:05:59: success0
+2019-03-29 10:05:59: select * from PACSPrint where AccessionNumber='DSA256'
+2019-03-29 10:05:59: success0
+2019-03-29 10:05:59: select * from PACSPrint where AccessionNumber='DSA256'
+2019-03-29 10:05:59: success0
+2019-03-29 10:06:04: update StudyOperateList set LeaveDate = Getdate() where LeaveDate is null and   UserCode='ly' and AccessionNumber='DSA256' and IPAddress='192.168.1.109' and ModuleName='冠脉造影'
+2019-03-29 10:06:04: success1
+2019-03-29 10:06:04: update StudyOperateList set LeaveDate = Getdate() where LeaveDate is null and  UserCode='ly' and ModuleName='冠脉造影' and AccessionNumber='DSA256'
+2019-03-29 10:06:04: success0
+2019-03-29 10:06:04: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','患者信息退出','DSA256','192.168.1.109',GetDate())
+2019-03-29 10:06:04: success1
+2019-03-29 10:06:04: update StudyOperateList set LeaveDate = Getdate() where leaveDate is null and  UserCode='ly' and IPAddress='192.168.1.109'
+2019-03-29 10:06:04: success0
+2019-03-29 10:07:42: connect init:164
+2019-03-29 10:07:42: select UserCode, password, UserName,UserType FROM PUB_User where UserCode = 'ly'
+2019-03-29 10:07:42: success1
+2019-03-29 10:07:44: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','登录','','192.168.1.109',GetDate())
+2019-03-29 10:07:44: success1
+2019-03-29 10:07:45: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='ssjbxx_Lab'
+2019-03-29 10:07:45: success6
+2019-03-29 10:07:45: select UserName,UserType from pub_User 
+2019-03-29 10:07:45: success32
+2019-03-29 10:07:45: select a.StudyDate,b.PatientsName ,b.PatientsID,b.PatientsSex ,a.ExamineName ,a.ExamineDoctor ,a.accessionNumber ,a.Lab ,a.RegDate ,(case a.status when 0 then '未开始' when 1 then '进行中' when 2 then '已完成' end) as myStatus,a.ImportantItem from CISReport a,pub_patients b where a.PatientIndex=b.PatientsIndex and a.StudyDate between '2019-03-29 00:00:00' and '2019-03-29 23:59:59'
+2019-03-29 10:07:45: success0
+2019-03-29 10:07:50: select a.StudyDate,b.PatientsName ,b.PatientsID,b.PatientsSex ,a.ExamineName ,a.ExamineDoctor ,a.accessionNumber ,a.Lab ,a.RegDate ,(case a.status when 0 then '未开始' when 1 then '进行中' when 2 then '已完成' end) as myStatus,a.ImportantItem from CISReport a,pub_patients b where a.PatientIndex=b.PatientsIndex and a.StudyDate between '2019-02-28 00:00:00' and '2019-03-29 23:59:59'
+2019-03-29 10:07:50: success45
+2019-03-29 10:07:57: select c.*,p.*,CAST(p.PatientsDOB as  datetime) as Birthday from CISReport as c ,pub_patients as p  where c.patientIndex=p.PatientsIndex and c.AccessionNumber = 'DSA110'
+2019-03-29 10:07:57: success1
+2019-03-29 10:07:57: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','患者信息','DSA110','192.168.1.109',GetDate())
+2019-03-29 10:07:57: success1
+2019-03-29 10:07:58: update StudyOperateList set LeaveDate = Getdate() where leaveDate is null and  UserCode='ly' and IPAddress='192.168.1.109'
+2019-03-29 10:07:58: success0
+2019-03-29 10:07:59: update StudyOperateList set LeaveDate = Getdate() where leaveDate is null and  UserCode='ly' and IPAddress='192.168.1.109'
+2019-03-29 10:07:59: success0
+2019-03-29 10:08:09: select c.*,p.*,CAST(p.PatientsDOB as  datetime) as Birthday from CISReport as c ,pub_patients as p  where c.patientIndex=p.PatientsIndex and c.AccessionNumber = 'DSA117'
+2019-03-29 10:08:09: success1
+2019-03-29 10:08:10: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','患者信息','DSA117','192.168.1.109',GetDate())
+2019-03-29 10:08:10: success1
+2019-03-29 10:08:11: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','图像查看','DSA117','192.168.1.109',GetDate())
+2019-03-29 10:08:11: success1
+2019-03-29 10:08:11: select cd.* from CoronaryDetail as cd,Coronary as c where cd.CoronaryIndex=c.CoronaryIndex and c.AccessionNumber='DSA117'
+2019-03-29 10:08:11: success1
+2019-03-29 10:08:11: select * from PACSPrint where AccessionNumber='DSA117' and len(LesionName)<1 
+2019-03-29 10:08:11: success2
+2019-03-29 10:08:11: select * from PACSPrint where AccessionNumber='DSA117'
+2019-03-29 10:08:11: success11
+2019-03-29 10:08:20: update StudyOperateList set LeaveDate = Getdate() where leaveDate is null and  UserCode='ly' and IPAddress='192.168.1.109'
+2019-03-29 10:08:20: success0
+2019-03-29 10:08:21: update StudyOperateList set LeaveDate = Getdate() where leaveDate is null and  UserCode='ly' and IPAddress='192.168.1.109'
+2019-03-29 10:08:21: success0
+2019-03-29 10:08:37: connect init:283
+2019-03-29 10:08:38: select UserCode, password, UserName,UserType FROM PUB_User where UserCode = 'ly'
+2019-03-29 10:08:38: success1
+2019-03-29 10:08:39: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','登录','','192.168.1.109',GetDate())
+2019-03-29 10:08:39: success1
+2019-03-29 10:08:40: select a.StudyDate,b.PatientsName ,b.PatientsID,b.PatientsSex ,a.ExamineName ,a.ExamineDoctor ,a.accessionNumber ,a.Lab ,a.RegDate ,(case a.status when 0 then '未开始' when 1 then '进行中' when 2 then '已完成' end) as myStatus,a.LockUserCode from CISReport a,pub_patients b where a.PatientIndex=b.PatientsIndex and a.StudyDate between '2019-03-29 00:00:00' and '2019-03-29 23:59:59'
+2019-03-29 10:08:40: success0
+2019-03-29 10:08:42: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='ssdj_Lab' order by b.ComboValueOrder asc
+2019-03-29 10:08:42: success5
+2019-03-29 10:08:42: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='ssdj_ExamineName' order by b.ComboValueOrder asc
+2019-03-29 10:08:42: success2
+2019-03-29 10:09:08: start getsingle select DictCode  from pub_Dict where Dictname='手术名称' and DictLevel=2
+2019-03-29 10:09:08: select DictName as 手术名称,dictAbbr  from pub_Dict where ParentDictCode=74 order by DictAbbr asc
+2019-03-29 10:09:08: success7
+2019-03-29 10:09:09: select UserName as 医生,userAbbr  from pub_User  where UserType=1
+2019-03-29 10:09:09: success24
+2019-03-29 10:09:21: start getsingle select DictCode  from pub_Dict where Dictname='手术名称' and DictLevel=2
+2019-03-29 10:09:21: select DictName as 手术名称,dictAbbr  from pub_Dict where ParentDictCode=74 order by DictAbbr asc
+2019-03-29 10:09:21: success7
+2019-03-29 10:09:29: start getsingle select DictCode  from pub_Dict where Dictname='手术名称' and DictLevel=2
+2019-03-29 10:09:29: select DictName as 手术名称,dictAbbr  from pub_Dict where ParentDictCode=74 order by DictAbbr asc
+2019-03-29 10:09:29: success7
+2019-03-29 10:09:29: select UserName as 医生,userAbbr  from pub_User  where UserType=1
+2019-03-29 10:09:29: success24
+2019-03-29 10:09:37: select * from pub_patients where patientsID='T03291008'
+2019-03-29 10:09:37: success0
+2019-03-29 10:09:37: select * from pub_patients where patientsID='T03291008'
+2019-03-29 10:09:37: Failed
+2019-03-29 10:09:37: Start Insert 
+2019-03-29 10:09:37: Insert into pub_Patients(PatientsName,PatientsCertificate,PatientsSex,PatientsDOB,ClinicDiagnose,BedNo,SickArea,PatientsPhone,PatientsAddress,PatientsComments,PatientsAlias,PatientsID) Values(@PatientsName,@PatientsCertificate,@PatientsSex,@PatientsDOB,@ClinicDiagnose,@BedNo,@SickArea,@PatientsPhone,@PatientsAddress,@PatientsComments,@PatientsAlias,@PatientsID)
+2019-03-29 10:09:37: success1
+2019-03-29 10:09:37: start getsingle select PatientsIndex from Pub_Patients where patientsID = 'T03291008'
+2019-03-29 10:09:37: Start Insert 
+2019-03-29 10:09:37: Insert into CISReport(PatientIndex,StudyDate,RegDate,ExamineType,Lab,PatientAge,StudyStartDate,StudyEndDate,EnterDate,LeaveDate,ExamineName,ExamineDoctor,Status) Values(@PatientIndex,@StudyDate,@RegDate,@ExamineType,@Lab,@PatientAge,@StudyStartDate,@StudyEndDate,@EnterDate,@LeaveDate,@ExamineName,@ExamineDoctor,@Status)
+2019-03-29 10:09:37: success1
+2019-03-29 10:09:37: select c.ReportIndex from CISReport as c ,pub_patients as p  where c.patientIndex=p.PatientsIndex and (c.AccessionNumber is null or c.AccessionNumber ='') and p.PatientsIndex=148
+2019-03-29 10:09:37: success1
+2019-03-29 10:09:37: update CisReport set AccessionNumber = 'DSA' + cast(ReportIndex as varchar(16)) where ReportIndex = 118 and (AccessionNumber is null or AccessionNumber ='')
+2019-03-29 10:09:37: success1
+2019-03-29 12:02:54: connect init:140
+2019-03-29 12:02:54: select UserCode, password, UserName,UserType FROM PUB_User where UserCode = 'ly'
+2019-03-29 12:02:54: success1
+2019-03-29 12:02:56: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','登录','','192.168.1.109',GetDate())
+2019-03-29 12:02:56: success1
+2019-03-29 12:02:57: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='ssjbxx_Lab'
+2019-03-29 12:02:57: success6
+2019-03-29 12:02:57: select UserName,UserType from pub_User 
+2019-03-29 12:02:57: success32
+2019-03-29 12:02:57: select a.StudyDate,b.PatientsName ,b.PatientsID,b.PatientsSex ,a.ExamineName ,a.ExamineDoctor ,a.accessionNumber ,a.Lab ,a.RegDate ,(case a.status when 0 then '未开始' when 1 then '进行中' when 2 then '已完成' end) as myStatus,a.ImportantItem from CISReport a,pub_patients b where a.PatientIndex=b.PatientsIndex and a.StudyDate between '2019-03-29 00:00:00' and '2019-03-29 23:59:59'
+2019-03-29 12:02:57: success1
+2019-03-29 12:03:00: select c.*,p.*,CAST(p.PatientsDOB as  datetime) as Birthday from CISReport as c ,pub_patients as p  where c.patientIndex=p.PatientsIndex and c.AccessionNumber = 'DSA118'
+2019-03-29 12:03:00: success1
+2019-03-29 12:03:00: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','患者信息','DSA118','192.168.1.109',GetDate())
+2019-03-29 12:03:00: success1
+2019-03-29 12:03:03: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','护理评估','DSA118','192.168.1.109',GetDate())
+2019-03-29 12:03:03: success1
+2019-03-29 12:03:03: select * from pub_Dict where DictAbbr = 'hlpg' and DictLevel=1 and ParentDictcode>0 order by ParentDictCode asc,DictIndex asc 
+2019-03-29 12:03:03: success1
+2019-03-29 12:03:03: select * from pub_Dict order by ParentDictCode asc,DictIndex asc 
+2019-03-29 12:03:03: success208
+2019-03-29 12:03:03: select * from CisReport where status=2 and  AccessionNumber = 'DSA118'
+2019-03-29 12:03:03: success0
+2019-03-29 12:03:03: select m.*,p.UserCode from pub_Menu as m ,pub_userPrivilege as p where m.menucode = p.menucode and p.usercode = 'ly' and m.MenuName='护理评估'
+2019-03-29 12:03:03: success1
+2019-03-29 12:03:03:  select * from studyOperateList where Leavedate is  null and OperateType = '编辑' and  AccessionNumber = 'DSA118' and ModuleName='护理评估' and IPAddress='192.168.1.109'
+2019-03-29 12:03:03: success0
+2019-03-29 12:03:03: insert into StudyOperateList(UserCode,ModuleName,AccessionNumber,IPAddress,EnterDate,OperateType,SoftNodeID,SoftNodeName) values('ly','护理评估','DSA118','192.168.1.109',GetDate(),'编辑','CIS03','3号导管室')
+2019-03-29 12:03:03: success1
+2019-03-29 12:03:03: select *  from CISReportDetail where FieldAbbr like'hlpg%' and AccessionNumber='DSA118' order by RecordDate asc
+2019-03-29 12:03:03: success0
+2019-03-29 12:03:05: Start Insert 
+2019-03-29 12:03:05: Insert into CISReportDetail(AccessionNumber,FieldGroup,FieldAbbr,FieldText,ModifyCode,RecordCode,ModifyDate,RecordDate) Values(@AccessionNumber,@FieldGroup,@FieldAbbr,@FieldText,@ModifyCode,@RecordCode,@ModifyDate,@RecordDate)
+2019-03-29 12:03:05: success1
+2019-03-29 12:03:05: update CisReport set Status =1 where AccessionNumber='DSA118' and status=0
+2019-03-29 12:03:05: success1
+2019-03-29 12:03:05: select *  from CISReportDetail where FieldAbbr like'hlpg%' and AccessionNumber='DSA118' order by RecordDate asc
+2019-03-29 12:03:05: success1
+2019-03-29 12:03:07: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','用药记录','DSA118','192.168.1.109',GetDate())
+2019-03-29 12:03:07: success1
+2019-03-29 12:03:07: select * from pub_Dict where DictAbbr = 'yyjl' and DictLevel=1 and ParentDictcode>0 order by ParentDictCode asc,DictIndex asc 
+2019-03-29 12:03:07: success1
+2019-03-29 12:03:07: select * from pub_Dict order by ParentDictCode asc,DictIndex asc 
+2019-03-29 12:03:07: success208
+2019-03-29 12:03:07: select * from CisReport where status=2 and  AccessionNumber = 'DSA118'
+2019-03-29 12:03:07: success0
+2019-03-29 12:03:07: select m.*,p.UserCode from pub_Menu as m ,pub_userPrivilege as p where m.menucode = p.menucode and p.usercode = 'ly' and m.MenuName='用药记录'
+2019-03-29 12:03:07: success1
+2019-03-29 12:03:07:  select * from studyOperateList where Leavedate is  null and OperateType = '编辑' and  AccessionNumber = 'DSA118' and ModuleName='用药记录' and IPAddress='192.168.1.109'
+2019-03-29 12:03:07: success0
+2019-03-29 12:03:07: insert into StudyOperateList(UserCode,ModuleName,AccessionNumber,IPAddress,EnterDate,OperateType,SoftNodeID,SoftNodeName) values('ly','用药记录','DSA118','192.168.1.109',GetDate(),'编辑','CIS03','3号导管室')
+2019-03-29 12:03:07: success1
+2019-03-29 12:03:07: select *  from CISReportDetail where FieldAbbr like'yyjl%' and AccessionNumber='DSA118' order by RecordDate asc
+2019-03-29 12:03:07: success0
+2019-03-29 12:03:08: select * from pub_Dict where ParentDictCode=100
+2019-03-29 12:03:08: success0
+2019-03-29 12:03:10: Start Insert 
+2019-03-29 12:03:10: Insert into CISReportDetail(AccessionNumber,FieldGroup,FieldAbbr,FieldText,ModifyCode,RecordCode,ModifyDate,RecordDate) Values(@AccessionNumber,@FieldGroup,@FieldAbbr,@FieldText,@ModifyCode,@RecordCode,@ModifyDate,@RecordDate)
+2019-03-29 12:03:10: success1
+2019-03-29 12:03:10: update CisReport set Status =1 where AccessionNumber='DSA118' and status=0
+2019-03-29 12:03:10: success0
+2019-03-29 12:03:10: select *  from CISReportDetail where FieldAbbr like'yyjl%' and AccessionNumber='DSA118' order by RecordDate asc
+2019-03-29 12:03:10: success1
+2019-03-29 12:03:11: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','耗材记录','DSA118','192.168.1.109',GetDate())
+2019-03-29 12:03:11: success1
+2019-03-29 12:03:11: select *,cost=Number*price  from CISEquipment where  AccessionNumber='DSA118' order by RecordDate asc
+2019-03-29 12:03:11: success0
+2019-03-29 12:03:11: select *,cost=Number*price  from CISEquipment where  AccessionNumber='DSA118' order by RecordDate asc
+2019-03-29 12:03:11: success0
+2019-03-29 12:03:11: select * from CisReport where status=2 and  AccessionNumber = 'DSA118'
+2019-03-29 12:03:11: success0
+2019-03-29 12:03:11: select m.*,p.UserCode from pub_Menu as m, pub_userPrivilege as p where m.menucode = p.menucode and p.usercode = 'ly' and m.MenuName='耗材记录'
+2019-03-29 12:03:11: success1
+2019-03-29 12:03:11:  select * from studyOperateList where Leavedate is  null and OperateType = '编辑' and  AccessionNumber = 'DSA118' and ModuleName='耗材记录' and IPAddress='192.168.1.109'
+2019-03-29 12:03:11: success0
+2019-03-29 12:03:11: insert into StudyOperateList(UserCode,ModuleName,AccessionNumber,IPAddress,EnterDate,OperateType,SoftNodeID,SoftNodeName) values('ly','耗材记录','DSA118','192.168.1.109',GetDate(),'编辑','CIS03','3号导管室')
+2019-03-29 12:03:11: success1
+2019-03-29 12:03:13: select top 1 e.*,t.* from EquipmentInner as e, EquipmentType as t  where e.EquipmentIndex=t.EquipmentIndex and t.MainBarCode='1'
+2019-03-29 12:03:13: success1
+2019-03-29 12:03:13: Start Insert 
+2019-03-29 12:03:13: Insert into CISEquipment(EquipmentName,EquipmentType,Category,Brand,Provider,Price,Number,AccessionNumber,Source,ExpiryDate,MainBarCode,BatchCode,RecordCode,RecordName) Values(@EquipmentName,@EquipmentType,@Category,@Brand,@Provider,@Price,@Number,@AccessionNumber,@Source,@ExpiryDate,@MainBarCode,@BatchCode,@RecordCode,@RecordName)
+2019-03-29 12:03:13: success1
+2019-03-29 12:03:13: select *,cost=Number*price  from CISEquipment where  AccessionNumber='DSA118' order by RecordDate asc
+2019-03-29 12:03:13: success1
+2019-03-29 12:03:14: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','护士介入治疗','DSA118','192.168.1.109',GetDate())
+2019-03-29 12:03:14: success1
+2019-03-29 12:03:14: select * from pub_Dict where DictAbbr = 'hsjrzljl' and DictLevel=1 and ParentDictcode>0 order by ParentDictCode asc,DictIndex asc 
+2019-03-29 12:03:14: success1
+2019-03-29 12:03:14: select * from pub_Dict order by ParentDictCode asc,DictIndex asc 
+2019-03-29 12:03:14: success208
+2019-03-29 12:03:14: select * from CisReport where status=2 and  AccessionNumber = 'DSA118'
+2019-03-29 12:03:14: success0
+2019-03-29 12:03:14: select m.*,p.UserCode from pub_Menu as m ,pub_userPrivilege as p where m.menucode = p.menucode and p.usercode = 'ly' and m.MenuName='护士介入治疗'
+2019-03-29 12:03:14: success1
+2019-03-29 12:03:14:  select * from studyOperateList where Leavedate is  null and OperateType = '编辑' and  AccessionNumber = 'DSA118' and ModuleName='护士介入治疗' and IPAddress='192.168.1.109'
+2019-03-29 12:03:14: success0
+2019-03-29 12:03:14: insert into StudyOperateList(UserCode,ModuleName,AccessionNumber,IPAddress,EnterDate,OperateType,SoftNodeID,SoftNodeName) values('ly','护士介入治疗','DSA118','192.168.1.109',GetDate(),'编辑','CIS03','3号导管室')
+2019-03-29 12:03:14: success1
+2019-03-29 12:03:14: select *  from CISReportDetail where FieldAbbr like'hsjrzljl%' and AccessionNumber='DSA118' order by RecordDate asc
+2019-03-29 12:03:14: success0
+2019-03-29 12:03:15: Start Insert 
+2019-03-29 12:03:15: Insert into CISReportDetail(AccessionNumber,FieldGroup,FieldAbbr,FieldText,ModifyCode,RecordCode,ModifyDate,RecordDate) Values(@AccessionNumber,@FieldGroup,@FieldAbbr,@FieldText,@ModifyCode,@RecordCode,@ModifyDate,@RecordDate)
+2019-03-29 12:03:15: success1
+2019-03-29 12:03:15: update CisReport set Status =1 where AccessionNumber='DSA118' and status=0
+2019-03-29 12:03:15: success0
+2019-03-29 12:03:15: select *  from CISReportDetail where FieldAbbr like'hsjrzljl%' and AccessionNumber='DSA118' order by RecordDate asc
+2019-03-29 12:03:15: success1
+2019-03-29 12:03:17: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','冠脉造影','DSA118','192.168.1.109',GetDate())
+2019-03-29 12:03:17: success1
+2019-03-29 12:03:17: select * from CisReport where status=2 and  AccessionNumber = 'DSA118'
+2019-03-29 12:03:17: Failed
+2019-03-29 12:03:17: select m.*,p.UserCode from pub_Menu as m , pub_userPrivilege as p where m.menucode = p.menucode and p.usercode = 'ly' and m.MenuName='冠脉造影'
+2019-03-29 12:03:17: 203
+2019-03-29 12:03:17:  select * from studyOperateList where Leavedate is  null and OperateType = '编辑' and  AccessionNumber = 'DSA118' and ModuleName='冠脉造影'
+2019-03-29 12:03:17: Failed
+2019-03-29 12:03:17: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jrzlqk_cyss' order by b.ComboValueOrder asc
+2019-03-29 12:03:17: success9
+2019-03-29 12:03:17: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jrzlqk_bwjr' order by b.ComboValueOrder asc
+2019-03-29 12:03:17: success2
+2019-03-29 12:03:17: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jrzlqk_zlhTIMI' order by b.ComboValueOrder asc
+2019-03-29 12:03:17: success4
+2019-03-29 12:03:17: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jrzlqk_zrzj' order by b.ComboValueOrder asc
+2019-03-29 12:03:17: success8
+2019-03-29 12:03:17: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jrzlqk_szbfz' order by b.ComboValueOrder asc
+2019-03-29 12:03:17: success15
+2019-03-29 12:03:17: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_FFR_ty1' order by b.ComboValueOrder asc
+2019-03-29 12:03:17: success9
+2019-03-29 12:03:17: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_FFR_ty2' order by b.ComboValueOrder asc
+2019-03-29 12:03:17: success9
+2019-03-29 12:03:17: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_IVUS_IVUSsj1' order by b.ComboValueOrder asc
+2019-03-29 12:03:17: success12
+2019-03-29 12:03:17: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_IVUS_IVUSsj2' order by b.ComboValueOrder asc
+2019-03-29 12:03:17: success7
+2019-03-29 12:03:17: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_OCT_OCTsj1' order by b.ComboValueOrder asc
+2019-03-29 12:03:17: success12
+2019-03-29 12:03:17: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_OCT_OCTsj2' order by b.ComboValueOrder asc
+2019-03-29 12:03:17: success7
+2019-03-29 12:03:17: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_gmysx' order by b.ComboValueOrder asc
+2019-03-29 12:03:17: success3
+2019-03-29 12:03:17: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_jxgm' order by b.ComboValueOrder asc
+2019-03-29 12:03:17: success5
+2019-03-29 12:03:17: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_shzd' order by b.ComboValueOrder asc
+2019-03-29 12:03:17: success6
+2019-03-29 12:03:17: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_bhff' order by b.ComboValueOrder asc
+2019-03-29 12:03:17: success5
+2019-03-29 12:03:17: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_bfz' order by b.ComboValueOrder asc
+2019-03-29 12:03:17: success3
+2019-03-29 12:03:17: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_czxg' order by b.ComboValueOrder asc
+2019-03-29 12:03:17: success2
+2019-03-29 12:03:17: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_zhidong' order by b.ComboValueOrder asc
+2019-03-29 12:03:17: success3
+2019-03-29 12:03:17: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_cabgs' order by b.ComboValueOrder asc
+2019-03-29 12:03:17: success5
+2019-03-29 12:03:17: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_xm_mtdx' order by b.ComboValueOrder asc
+2019-03-29 12:03:17: success4
+2019-03-29 12:03:17: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_xm_jkxg' order by b.ComboValueOrder asc
+2019-03-29 12:03:17: success2
+2019-03-29 12:03:17: select  * from Coronary where AccessionNumber = 'DSA118'
+2019-03-29 12:03:17: Failed
+2019-03-29 12:03:17: insert into StudyOperateList(UserCode,ModuleName,AccessionNumber,IPAddress,EnterDate,OperateType,SoftNodeID,SoftNodeName) values('ly','冠脉造影','DSA118','192.168.1.109',GetDate(),'编辑','CIS03','3号导管室')
+2019-03-29 12:03:17: success1
+2019-03-29 12:03:32: select * from Coronary where CoronaryIndex =-1
+2019-03-29 12:03:32: Failed
+2019-03-29 12:03:32: Start Insert 
+2019-03-29 12:03:32: Insert into Coronary(AccessionNumber,gmysx,jxgm,czxg,Cabgs,gmjd,shzd,bgsj,fsjl,bfz,bhff,zhidong,RecordCode,RecordName,RecordDate) Values(@AccessionNumber,@gmysx,@jxgm,@czxg,@Cabgs,@gmjd,@shzd,@bgsj,@fsjl,@bfz,@bhff,@zhidong,@RecordCode,@RecordName,@RecordDate)
+2019-03-29 12:03:32: success1
+2019-03-29 12:03:32: start getsingle select * from Coronary where accessionNumber ='DSA118'
+2019-03-29 12:03:33: update CISReport set status=1 where AccessionNumber='DSA118' and status=0
+2019-03-29 12:03:33: success0
+2019-03-29 12:04:11: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_xgxxlr_bbfx' order by b.ComboValueOrder asc
+2019-03-29 12:04:11: success4
+2019-03-29 12:04:11: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_xgxxlr_fzxg' order by b.ComboValueOrder asc
+2019-03-29 12:04:11: success3
+2019-03-29 12:04:11: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_xgxxlr_jrzl' order by b.ComboValueOrder asc
+2019-03-29 12:04:11: success7
+2019-03-29 12:04:11: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_xgxxlr_jwzj' order by b.ComboValueOrder asc
+2019-03-29 12:04:11: success7
+2019-03-29 12:04:11: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_xgxxlr_jwzjlx' order by b.ComboValueOrder asc
+2019-03-29 12:04:11: success8
+2019-03-29 12:04:11: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_xgxxlr_bbbw' order by b.ComboValueOrder asc
+2019-03-29 12:04:11: success61
+2019-03-29 12:04:11: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_xgxxlr_bbtd' order by b.ComboValueOrder asc
+2019-03-29 12:04:11: success15
+2019-03-29 12:04:11: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_xgxxlr_timi' order by b.ComboValueOrder asc
+2019-03-29 12:04:11: success4
+2019-03-29 12:04:26: select * from CoronaryFFRDetail where  CoronaryDetailIndex =-1
+2019-03-29 12:04:26: Failed
+2019-03-29 12:04:26: select * from CoronaryIVUSDetail where  CoronaryDetailIndex =-1
+2019-03-29 12:04:26: Failed
+2019-03-29 12:04:26: select * from CoronaryOCTDetail where  CoronaryDetailIndex =-1
+2019-03-29 12:04:26: Failed
+2019-03-29 12:04:26: Start Insert 
+2019-03-29 12:04:26: Insert into CoronaryDetail(CoronaryIndex,bbbw,bbtd,Timi,Bbfx,Fzxg,Jrzl,Jwzj,Jwzjlx,Clyj,Xzcd,Bbcd,XzcdValue1,XzcdValue2,BbcdValue1,BbcdValue2,RecordCode,RecordName,RecordDate) Values(@CoronaryIndex,@bbbw,@bbtd,@Timi,@Bbfx,@Fzxg,@Jrzl,@Jwzj,@Jwzjlx,@Clyj,@Xzcd,@Bbcd,@XzcdValue1,@XzcdValue2,@BbcdValue1,@BbcdValue2,@RecordCode,@RecordName,@RecordDate)
+2019-03-29 12:04:26: success1
+2019-03-29 12:04:26: select *,(case xzcd when '区间' then  CAST(XzcdValue1 as varchar(4))+'-'+CAST(XzcdValue2 as varchar(4)) else  CAST(XzcdValue1 as varchar(4))  end ) as NewXzcd,(case Bbcd when '区间' then  CAST(BbcdValue1 as varchar(4))+'-'+CAST(BbcdValue2 as varchar(4)) else  CAST(BbcdValue1 as varchar(4))  end ) as NewBbcd   from CoronaryDetail where CoronaryIndex=70
+2019-03-29 12:04:26: success1
+2019-03-29 12:04:26: select DetailIndex,(Category+' '+EquipmentName+' '+EquipmentType+' '+Brand) as Equipment,number,sysfcg,cast(zxyl as varchar(12)) as zxyl,cast(zdyl as varchar(12)) as zdyl ,cast(sfsj as varchar(12)) as sfsj,bz from CoronaryEquipmentDetail  where CoronaryDetailIndex =145  and (Category like '%球囊%'  or Category like '%支架%' )  union  select DetailIndex,(Category + ' ' + EquipmentName + ' ' +EquipmentType + ' ' + Brand) as Equipment,number,sysfcg,zxyl='/ ',zdyl='/',sfsj='/',bz from CoronaryEquipmentDetail  where CoronaryDetailIndex = 145 and not (Category like '%球囊%')  and not (Category like '%支架%')  
+2019-03-29 12:04:26: success0
+2019-03-29 12:04:26: select * from CoronaryInterveneDetail where  CoronaryDetailIndex =145
+2019-03-29 12:04:26: success0
+2019-03-29 12:04:26: select * from CoronaryROTADetail where  CoronaryDetailIndex =145
+2019-03-29 12:04:26: success0
+2019-03-29 12:04:27: select *,cost=Number*price  from CISEquipment where  AccessionNumber='DSA118' order by RecordDate asc
+2019-03-29 12:04:27: success1
+2019-03-29 12:04:29: Start Insert 
+2019-03-29 12:04:29: Insert into CoronaryEquipmentDetail(CoronaryDetailIndex,EquipmentType,EquipmentName,Category,Brand,Provider,Country,Number,source,MainBarCode,BatchCode,ExpireDate,RecordCode,RecordName,sysfcg,zxyl,zdyl,sfsj,bz,EquipmentIndex) Values(@CoronaryDetailIndex,@EquipmentType,@EquipmentName,@Category,@Brand,@Provider,@Country,@Number,@source,@MainBarCode,@BatchCode,@ExpireDate,@RecordCode,@RecordName,@sysfcg,@zxyl,@zdyl,@sfsj,@bz,@EquipmentIndex)
+2019-03-29 12:04:29: success1
+2019-03-29 12:04:29: select DetailIndex,(Category+' '+EquipmentName+' '+EquipmentType+' '+Brand) as Equipment,number,sysfcg,cast(zxyl as varchar(12)) as zxyl,cast(zdyl as varchar(12)) as zdyl ,cast(sfsj as varchar(12)) as sfsj,bz from CoronaryEquipmentDetail  where CoronaryDetailIndex =145  and (Category like '%球囊%'  or Category like '%支架%' )  union  select DetailIndex,(Category + ' ' + EquipmentName + ' ' +EquipmentType + ' ' + Brand) as Equipment,number,sysfcg,zxyl='/ ',zdyl='/',sfsj='/',bz from CoronaryEquipmentDetail  where CoronaryDetailIndex = 145 and not (Category like '%球囊%')  and not (Category like '%支架%')  
+2019-03-29 12:04:29: success1
+2019-03-29 12:04:30: select *  from CoronaryEquipmentDetail where  DetailIndex=330
+2019-03-29 12:04:30: success1
+2019-03-29 12:04:31: start UpdateRecord
+2019-03-29 12:04:31: Update CoronaryEquipmentDetail set sysfcg=@sysfcg,zxyl=@zxyl,zdyl=@zdyl,sfsj=@sfsj,Number=@Number,bz=@bz where DetailIndex=@DetailIndex
+2019-03-29 12:04:31: success1
+2019-03-29 12:04:31: select DetailIndex,(Category+' '+EquipmentName+' '+EquipmentType+' '+Brand) as Equipment,number,sysfcg,cast(zxyl as varchar(12)) as zxyl,cast(zdyl as varchar(12)) as zdyl ,cast(sfsj as varchar(12)) as sfsj,bz from CoronaryEquipmentDetail  where CoronaryDetailIndex =145  and (Category like '%球囊%'  or Category like '%支架%' )  union  select DetailIndex,(Category + ' ' + EquipmentName + ' ' +EquipmentType + ' ' + Brand) as Equipment,number,sysfcg,zxyl='/ ',zdyl='/',sfsj='/',bz from CoronaryEquipmentDetail  where CoronaryDetailIndex = 145 and not (Category like '%球囊%')  and not (Category like '%支架%')  
+2019-03-29 12:04:31: success1
+2019-03-29 12:04:32: select *  from CoronaryEquipmentDetail where  DetailIndex=330
+2019-03-29 12:04:32: success1
+2019-03-29 12:04:34: start UpdateRecord
+2019-03-29 12:04:34: Update CoronaryEquipmentDetail set sysfcg=@sysfcg,zxyl=@zxyl,zdyl=@zdyl,sfsj=@sfsj,Number=@Number,bz=@bz where DetailIndex=@DetailIndex
+2019-03-29 12:04:34: success1
+2019-03-29 12:04:34: select DetailIndex,(Category+' '+EquipmentName+' '+EquipmentType+' '+Brand) as Equipment,number,sysfcg,cast(zxyl as varchar(12)) as zxyl,cast(zdyl as varchar(12)) as zdyl ,cast(sfsj as varchar(12)) as sfsj,bz from CoronaryEquipmentDetail  where CoronaryDetailIndex =145  and (Category like '%球囊%'  or Category like '%支架%' )  union  select DetailIndex,(Category + ' ' + EquipmentName + ' ' +EquipmentType + ' ' + Brand) as Equipment,number,sysfcg,zxyl='/ ',zdyl='/',sfsj='/',bz from CoronaryEquipmentDetail  where CoronaryDetailIndex = 145 and not (Category like '%球囊%')  and not (Category like '%支架%')  
+2019-03-29 12:04:34: success1
+2019-03-29 12:04:45: select * from  CoronaryInterveneDetail where  CoronaryDetailIndex =145
+2019-03-29 12:04:45: Failed
+2019-03-29 12:04:45: Start Insert 
+2019-03-29 12:04:45: Insert into CoronaryInterVeneDetail(Cyss,Bwjr,zlhtimi,Zrzj,szbfz,RecordCode,RecordName,RecordDate,ZlhXzcd,ZlhxzcdValue1,ZlhxzcdValue2,CoronaryDetailIndex) Values(@Cyss,@Bwjr,@zlhtimi,@Zrzj,@szbfz,@RecordCode,@RecordName,@RecordDate,@ZlhXzcd,@ZlhxzcdValue1,@ZlhxzcdValue2,@CoronaryDetailIndex)
+2019-03-29 12:04:45: success1
+2019-03-29 12:04:51: Start Insert 
+2019-03-29 12:04:51: Insert into CoronaryROTADetail(mtdx,zs,jkxg,CoronaryDetailIndex,RecordCode,RecordName,RecordDate) Values(@mtdx,@zs,@jkxg,@CoronaryDetailIndex,@RecordCode,@RecordName,@RecordDate)
+2019-03-29 12:04:51: success1
+2019-03-29 12:04:51: select * from CoronaryROTADetail where CoronaryDetailIndex=145
+2019-03-29 12:04:51: success1
+2019-03-29 12:07:02: select DetailIndex,(Category+' '+EquipmentName+' '+EquipmentType+' '+Brand) as Equipment,number,sysfcg,cast(zxyl as varchar(12)) as zxyl,cast(zdyl as varchar(12)) as zdyl ,cast(sfsj as varchar(12)) as sfsj,bz from CoronaryEquipmentDetail  where CoronaryDetailIndex =145  and (Category like '%球囊%'  or Category like '%支架%' )  union  select DetailIndex,(Category + ' ' + EquipmentName + ' ' +EquipmentType + ' ' + Brand) as Equipment,number,sysfcg,zxyl='/ ',zdyl='/',sfsj='/',bz from CoronaryEquipmentDetail  where CoronaryDetailIndex = 145 and not (Category like '%球囊%')  and not (Category like '%支架%')  
+2019-03-29 12:07:02: success1
+2019-03-29 12:07:02: select * from CoronaryInterveneDetail where  CoronaryDetailIndex =145
+2019-03-29 12:07:02: success1
+2019-03-29 12:07:02: select * from CoronaryROTADetail where  CoronaryDetailIndex =145
+2019-03-29 12:07:02: success1
+2019-03-29 12:07:03: select *  from CoronaryEquipmentDetail where  DetailIndex=330
+2019-03-29 12:07:03: success1
+2019-03-29 12:07:04: select DetailIndex,(Category+' '+EquipmentName+' '+EquipmentType+' '+Brand) as Equipment,number,sysfcg,cast(zxyl as varchar(12)) as zxyl,cast(zdyl as varchar(12)) as zdyl ,cast(sfsj as varchar(12)) as sfsj,bz from CoronaryEquipmentDetail  where CoronaryDetailIndex =145  and (Category like '%球囊%'  or Category like '%支架%' )  union  select DetailIndex,(Category + ' ' + EquipmentName + ' ' +EquipmentType + ' ' + Brand) as Equipment,number,sysfcg,zxyl='/ ',zdyl='/',sfsj='/',bz from CoronaryEquipmentDetail  where CoronaryDetailIndex = 145 and not (Category like '%球囊%')  and not (Category like '%支架%')  
+2019-03-29 12:07:04: success1
+2019-03-29 12:07:04: select DetailIndex,(Category+' '+EquipmentName+' '+EquipmentType+' '+Brand) as Equipment,number,sysfcg,cast(zxyl as varchar(12)) as zxyl,cast(zdyl as varchar(12)) as zdyl ,cast(sfsj as varchar(12)) as sfsj,bz from CoronaryEquipmentDetail  where CoronaryDetailIndex =145  and (Category like '%球囊%'  or Category like '%支架%' )  union  select DetailIndex,(Category + ' ' + EquipmentName + ' ' +EquipmentType + ' ' + Brand) as Equipment,number,sysfcg,zxyl='/ ',zdyl='/',sfsj='/',bz from CoronaryEquipmentDetail  where CoronaryDetailIndex = 145 and not (Category like '%球囊%')  and not (Category like '%支架%')  
+2019-03-29 12:07:04: success1
+2019-03-29 12:07:04: select * from CoronaryInterveneDetail where  CoronaryDetailIndex =145
+2019-03-29 12:07:04: success1
+2019-03-29 12:07:04: select * from CoronaryROTADetail where  CoronaryDetailIndex =145
+2019-03-29 12:07:04: success1
+2019-03-29 12:07:05: select * from CoronaryDetail where DetailIndex=145
+2019-03-29 12:07:05: success1
+2019-03-29 12:07:05: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_xgxxlr_bbfx' order by b.ComboValueOrder asc
+2019-03-29 12:07:05: success4
+2019-03-29 12:07:05: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_xgxxlr_fzxg' order by b.ComboValueOrder asc
+2019-03-29 12:07:05: success3
+2019-03-29 12:07:05: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_xgxxlr_jrzl' order by b.ComboValueOrder asc
+2019-03-29 12:07:05: success7
+2019-03-29 12:07:05: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_xgxxlr_jwzj' order by b.ComboValueOrder asc
+2019-03-29 12:07:05: success7
+2019-03-29 12:07:05: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_xgxxlr_jwzjlx' order by b.ComboValueOrder asc
+2019-03-29 12:07:05: success8
+2019-03-29 12:07:05: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_xgxxlr_bbbw' order by b.ComboValueOrder asc
+2019-03-29 12:07:05: success61
+2019-03-29 12:07:05: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_xgxxlr_bbtd' order by b.ComboValueOrder asc
+2019-03-29 12:07:05: success15
+2019-03-29 12:07:05: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_xgxxlr_timi' order by b.ComboValueOrder asc
+2019-03-29 12:07:05: success4
+2019-03-29 12:07:07: select *,(case xzcd when '区间' then  CAST(XzcdValue1 as varchar(4))+'-'+CAST(XzcdValue2 as varchar(4)) else  CAST(XzcdValue1 as varchar(4))  end ) as NewXzcd,(case Bbcd when '区间' then  CAST(BbcdValue1 as varchar(4))+'-'+CAST(BbcdValue2 as varchar(4)) else  CAST(BbcdValue1 as varchar(4))  end ) as NewBbcd   from CoronaryDetail where CoronaryIndex=70
+2019-03-29 12:07:07: success1
+2019-03-29 12:07:07: select DetailIndex,(Category+' '+EquipmentName+' '+EquipmentType+' '+Brand) as Equipment,number,sysfcg,cast(zxyl as varchar(12)) as zxyl,cast(zdyl as varchar(12)) as zdyl ,cast(sfsj as varchar(12)) as sfsj,bz from CoronaryEquipmentDetail  where CoronaryDetailIndex =145  and (Category like '%球囊%'  or Category like '%支架%' )  union  select DetailIndex,(Category + ' ' + EquipmentName + ' ' +EquipmentType + ' ' + Brand) as Equipment,number,sysfcg,zxyl='/ ',zdyl='/',sfsj='/',bz from CoronaryEquipmentDetail  where CoronaryDetailIndex = 145 and not (Category like '%球囊%')  and not (Category like '%支架%')  
+2019-03-29 12:07:07: success1
+2019-03-29 12:07:07: select * from CoronaryInterveneDetail where  CoronaryDetailIndex =145
+2019-03-29 12:07:07: success1
+2019-03-29 12:07:07: select * from CoronaryROTADetail where  CoronaryDetailIndex =145
+2019-03-29 12:07:07: success1
+2019-03-29 12:07:07: select DetailIndex,(Category+' '+EquipmentName+' '+EquipmentType+' '+Brand) as Equipment,number,sysfcg,cast(zxyl as varchar(12)) as zxyl,cast(zdyl as varchar(12)) as zdyl ,cast(sfsj as varchar(12)) as sfsj,bz from CoronaryEquipmentDetail  where CoronaryDetailIndex =145  and (Category like '%球囊%'  or Category like '%支架%' )  union  select DetailIndex,(Category + ' ' + EquipmentName + ' ' +EquipmentType + ' ' + Brand) as Equipment,number,sysfcg,zxyl='/ ',zdyl='/',sfsj='/',bz from CoronaryEquipmentDetail  where CoronaryDetailIndex = 145 and not (Category like '%球囊%')  and not (Category like '%支架%')  
+2019-03-29 12:07:07: success1
+2019-03-29 12:07:07: select * from CoronaryInterveneDetail where  CoronaryDetailIndex =145
+2019-03-29 12:07:07: success1
+2019-03-29 12:07:07: select * from CoronaryROTADetail where  CoronaryDetailIndex =145
+2019-03-29 12:07:07: success1
+2019-03-29 12:07:10: update StudyOperateList set LeaveDate = Getdate() where LeaveDate is null and   UserCode='ly' and AccessionNumber='DSA118' and IPAddress='192.168.1.109' and ModuleName='冠脉造影'
+2019-03-29 12:07:10: success1
+2019-03-29 12:07:10: update StudyOperateList set LeaveDate = Getdate() where LeaveDate is null and  UserCode='ly' and ModuleName='冠脉造影' and AccessionNumber='DSA118'
+2019-03-29 12:07:10: success0
+2019-03-29 12:07:10: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','患者信息退出','DSA118','192.168.1.109',GetDate())
+2019-03-29 12:07:10: success1
+2019-03-29 12:07:11: update StudyOperateList set LeaveDate = Getdate() where LeaveDate is null and   UserCode='ly' and AccessionNumber='DSA118' and IPAddress='192.168.1.109' and ModuleName='护士介入治疗'
+2019-03-29 12:07:11: success1
+2019-03-29 12:07:11: update StudyOperateList set LeaveDate = Getdate() where LeaveDate is null and  UserCode='ly' and ModuleName='护士介入治疗' and AccessionNumber='DSA118'
+2019-03-29 12:07:11: success0
+2019-03-29 12:07:11: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','患者信息退出','DSA118','192.168.1.109',GetDate())
+2019-03-29 12:07:11: success1
+2019-03-29 12:07:12: update StudyOperateList set LeaveDate = Getdate() where LeaveDate is null and   UserCode='ly' and AccessionNumber='DSA118' and IPAddress='192.168.1.109' and ModuleName='耗材记录'
+2019-03-29 12:07:12: success1
+2019-03-29 12:07:12: update StudyOperateList set LeaveDate = Getdate() where LeaveDate is null and  UserCode='ly' and ModuleName='耗材记录' and AccessionNumber='DSA118'
+2019-03-29 12:07:12: success0
+2019-03-29 12:07:13: select *,cost=Number*price  from CISEquipment where  AccessionNumber='DSA118' order by RecordDate asc
+2019-03-29 12:07:13: success1
+2019-03-29 12:07:13: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','患者信息退出','DSA118','192.168.1.109',GetDate())
+2019-03-29 12:07:13: success1
+2019-03-29 12:07:13: update StudyOperateList set LeaveDate = Getdate() where LeaveDate is null and   UserCode='ly' and AccessionNumber='DSA118' and IPAddress='192.168.1.109' and ModuleName='用药记录'
+2019-03-29 12:07:13: success1
+2019-03-29 12:07:13: update StudyOperateList set LeaveDate = Getdate() where LeaveDate is null and  UserCode='ly' and ModuleName='用药记录' and AccessionNumber='DSA118'
+2019-03-29 12:07:13: success0
+2019-03-29 12:07:13: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','患者信息退出','DSA118','192.168.1.109',GetDate())
+2019-03-29 12:07:13: success1
+2019-03-29 12:07:14: update StudyOperateList set LeaveDate = Getdate() where LeaveDate is null and   UserCode='ly' and AccessionNumber='DSA118' and IPAddress='192.168.1.109' and ModuleName='护理评估'
+2019-03-29 12:07:14: success1
+2019-03-29 12:07:14: update StudyOperateList set LeaveDate = Getdate() where LeaveDate is null and  UserCode='ly' and ModuleName='护理评估' and AccessionNumber='DSA118'
+2019-03-29 12:07:14: success0
+2019-03-29 12:07:14: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','患者信息退出','DSA118','192.168.1.109',GetDate())
+2019-03-29 12:07:14: success1
+2019-03-29 12:07:17: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','手术日志','DSA118','192.168.1.109',GetDate())
+2019-03-29 12:07:17: success1
+2019-03-29 12:07:17: exec CreateReportInfoList 'DSA118'
+2019-03-29 12:07:17: success11
+2019-03-29 12:07:17: select *, (case InfoType when 'hlpg' then '护理评估' when 'hcjl' then '耗材记录' when 'hsjrzljl' then '护士介入治疗记录' when 'yyjl' then '用药记录' when 'ysjrzljl' then '医生介入治疗记录' else InfoType end )  as InfoTypeAlias  from ReportInfoList where  AccessionNumber='DSA118' order by RecordDate asc
+2019-03-29 12:07:17: success11
+2019-03-29 12:07:19: exec CreateReportInfoList 'DSA118'
+2019-03-29 12:07:19: success22
+2019-03-29 12:07:19: select *, (case InfoType when 'hlpg' then '护理评估' when 'hcjl' then '耗材记录' when 'hsjrzljl' then '护士介入治疗记录' when 'yyjl' then '用药记录' when 'ysjrzljl' then '医生介入治疗记录' else InfoType end )  as InfoTypeAlias  from ReportInfoList where  AccessionNumber='DSA118' order by RecordDate asc
+2019-03-29 12:07:19: success11
+2019-03-29 12:07:21: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','图像查看','DSA118','192.168.1.109',GetDate())
+2019-03-29 12:07:21: success1
+2019-03-29 12:07:21: select cd.* from CoronaryDetail as cd,Coronary as c where cd.CoronaryIndex=c.CoronaryIndex and c.AccessionNumber='DSA118'
+2019-03-29 12:07:21: success1
+2019-03-29 12:07:21: select * from PACSPrint where AccessionNumber='DSA118' and len(LesionName)<1 
+2019-03-29 12:07:21: success0
+2019-03-29 12:07:21: select * from PACSPrint where AccessionNumber='DSA118' and len(LesionName)>0
+2019-03-29 12:07:21: success0
+2019-03-29 12:07:35: exec CreateReportInfoList 'DSA118'
+2019-03-29 12:07:35: success22
+2019-03-29 12:07:35: select *, (case InfoType when 'hlpg' then '护理评估' when 'hcjl' then '耗材记录' when 'hsjrzljl' then '护士介入治疗记录' when 'yyjl' then '用药记录' when 'ysjrzljl' then '医生介入治疗记录' else InfoType end )  as InfoTypeAlias  from ReportInfoList where  AccessionNumber='DSA118' order by RecordDate asc
+2019-03-29 12:07:35: success11
+2019-03-29 12:07:36: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','帧图像处理','DSA118','192.168.1.109',GetDate())
+2019-03-29 12:07:36: success1
+2019-03-29 12:07:36: select cd.* from CoronaryDetail as cd,Coronary as c where cd.CoronaryIndex=c.CoronaryIndex and c.AccessionNumber='DSA118'
+2019-03-29 12:07:36: success1
+2019-03-29 12:07:36: select * from PACSPrint where AccessionNumber='DSA118' and len(LesionName)<1 
+2019-03-29 12:07:36: success3
+2019-03-29 12:07:36: select * from PACSPrint where AccessionNumber='DSA118' and len(LesionName)>0
+2019-03-29 12:07:36: success1
+2019-03-29 12:07:41: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','报告模板','DSA118','192.168.1.109',GetDate())
+2019-03-29 12:07:41: success1
+2019-03-29 12:07:42: select * from Cisreport where AccessionNumber='DSA118'
+2019-03-29 12:07:42: success1
+2019-03-29 12:07:42: select m.*,p.UserCode from pub_Menu as m,pub_userPrivilege as p where m.menucode = p.menucode and p.usercode = 'ly' and m.MenuName='报告模板'
+2019-03-29 12:07:42: success1
+2019-03-29 12:07:42:  select * from studyOperateList where Leavedate is  null and OperateType = '编辑' and  AccessionNumber = 'DSA118' and ModuleName='报告模板'
+2019-03-29 12:07:42: success0
+2019-03-29 12:07:42: select *,del='删除模板',sign='模板签名',preview='打印预览' from ReportTemplate where AccessionNumber='DSA118'
+2019-03-29 12:07:42: success0
+2019-03-29 12:07:42: insert into StudyOperateList(UserCode,ModuleName,AccessionNumber,IPAddress,EnterDate,OperateType,SoftNodeID,SoftNodeName) values('ly','报告模板','DSA118','192.168.1.109',GetDate(),'编辑','CIS03','3号导管室')
+2019-03-29 12:07:42: success1
+2019-03-29 12:07:44: Start Insert 
+2019-03-29 12:07:44: Insert into ReportTemplate(RecordCode,RecordName,TemplateName,PdfFileName,AccessionNumber) Values(@RecordCode,@RecordName,@TemplateName,@PdfFileName,@AccessionNumber)
+2019-03-29 12:07:44: success1
+2019-03-29 12:07:44: select *,del='删除模板',sign='模板签名',preview='打印预览' from ReportTemplate where AccessionNumber='DSA118'
+2019-03-29 12:07:44: success1
+2019-03-29 12:07:44: select *,Preview='报告预览' from ReportTemplateHistory where TemplateName='正常冠脉造影报告' and AccessionNumber='DSA118'
+2019-03-29 12:07:44: success0
+2019-03-29 12:07:46: select *,Preview='报告预览' from ReportTemplateHistory where TemplateName='正常冠脉造影报告' and AccessionNumber='DSA118'
+2019-03-29 12:07:46: success0
+2019-03-29 12:07:47: delete from ReportTemplateHistory where accessionNumber='DSA118' and TemplateName='正常冠脉造影报告'
+2019-03-29 12:07:47: success0
+2019-03-29 12:07:47: delete from ReportTemplate where accessionNumber='DSA118' and TemplateName='正常冠脉造影报告'
+2019-03-29 12:07:47: success1
+2019-03-29 12:07:47: select *,del='删除模板',sign='模板签名',preview='打印预览' from ReportTemplate where AccessionNumber='DSA118'
+2019-03-29 12:07:47: success0
+2019-03-29 12:07:49: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','操作记录','DSA118','192.168.1.109',GetDate())
+2019-03-29 12:07:49: success1
+2019-03-29 12:07:49: select * from StudyOperateList where  AccessionNumber='DSA118' order by ModuleName asc,leavedate asc,enterdate asc
+2019-03-29 12:07:49: success6
+2019-03-29 12:07:54: update StudyOperateList set LeaveDate = Getdate() where LeaveDate is null and  UserCode='ly' and ModuleName='报告模板' and AccessionNumber='DSA118'
+2019-03-29 12:07:54: success1
+2019-03-29 12:07:54: exec CreateReportInfoList 'DSA118'
+2019-03-29 12:07:54: success22
+2019-03-29 12:07:54: select *, (case InfoType when 'hlpg' then '护理评估' when 'hcjl' then '耗材记录' when 'hsjrzljl' then '护士介入治疗记录' when 'yyjl' then '用药记录' when 'ysjrzljl' then '医生介入治疗记录' else InfoType end )  as InfoTypeAlias  from ReportInfoList where  AccessionNumber='DSA118' order by RecordDate asc
+2019-03-29 12:07:54: success11
+2019-03-29 12:07:54: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','患者信息退出','DSA118','192.168.1.109',GetDate())
+2019-03-29 12:07:54: success1
+2019-03-29 12:07:56: select * from StudyOperateList where  AccessionNumber='DSA118' order by ModuleName asc,leavedate asc,enterdate asc
+2019-03-29 12:07:56: success6
+2019-03-29 12:22:57: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','护理评估','DSA118','192.168.1.109',GetDate())
+2019-03-29 12:22:57: success1
+2019-03-29 12:22:57: select * from pub_Dict where DictAbbr = 'hlpg' and DictLevel=1 and ParentDictcode>0 order by ParentDictCode asc,DictIndex asc 
+2019-03-29 12:22:57: success1
+2019-03-29 12:22:57: select * from pub_Dict order by ParentDictCode asc,DictIndex asc 
+2019-03-29 12:22:57: success208
+2019-03-29 12:22:57: select * from CisReport where status=2 and  AccessionNumber = 'DSA118'
+2019-03-29 12:22:57: success0
+2019-03-29 12:22:57: select m.*,p.UserCode from pub_Menu as m ,pub_userPrivilege as p where m.menucode = p.menucode and p.usercode = 'ly' and m.MenuName='护理评估'
+2019-03-29 12:22:57: success1
+2019-03-29 12:22:57:  select * from studyOperateList where Leavedate is  null and OperateType = '编辑' and  AccessionNumber = 'DSA118' and ModuleName='护理评估' and IPAddress='192.168.1.109'
+2019-03-29 12:22:57: success0
+2019-03-29 12:22:57: insert into StudyOperateList(UserCode,ModuleName,AccessionNumber,IPAddress,EnterDate,OperateType,SoftNodeID,SoftNodeName) values('ly','护理评估','DSA118','192.168.1.109',GetDate(),'编辑','CIS03','3号导管室')
+2019-03-29 12:22:57: success1
+2019-03-29 12:22:57: select *  from CISReportDetail where FieldAbbr like'hlpg%' and AccessionNumber='DSA118' order by RecordDate asc
+2019-03-29 12:22:57: success1
+2019-03-29 12:22:59: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','用药记录','DSA118','192.168.1.109',GetDate())
+2019-03-29 12:22:59: success1
+2019-03-29 12:22:59: select * from pub_Dict where DictAbbr = 'yyjl' and DictLevel=1 and ParentDictcode>0 order by ParentDictCode asc,DictIndex asc 
+2019-03-29 12:22:59: success1
+2019-03-29 12:22:59: select * from pub_Dict order by ParentDictCode asc,DictIndex asc 
+2019-03-29 12:22:59: success208
+2019-03-29 12:22:59: select * from CisReport where status=2 and  AccessionNumber = 'DSA118'
+2019-03-29 12:22:59: success0
+2019-03-29 12:22:59: select m.*,p.UserCode from pub_Menu as m ,pub_userPrivilege as p where m.menucode = p.menucode and p.usercode = 'ly' and m.MenuName='用药记录'
+2019-03-29 12:22:59: success1
+2019-03-29 12:22:59:  select * from studyOperateList where Leavedate is  null and OperateType = '编辑' and  AccessionNumber = 'DSA118' and ModuleName='用药记录' and IPAddress='192.168.1.109'
+2019-03-29 12:22:59: success0
+2019-03-29 12:22:59: insert into StudyOperateList(UserCode,ModuleName,AccessionNumber,IPAddress,EnterDate,OperateType,SoftNodeID,SoftNodeName) values('ly','用药记录','DSA118','192.168.1.109',GetDate(),'编辑','CIS03','3号导管室')
+2019-03-29 12:22:59: success1
+2019-03-29 12:23:00: select *  from CISReportDetail where FieldAbbr like'yyjl%' and AccessionNumber='DSA118' order by RecordDate asc
+2019-03-29 12:23:00: success1
+2019-03-29 12:23:00: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','耗材记录','DSA118','192.168.1.109',GetDate())
+2019-03-29 12:23:00: success1
+2019-03-29 12:23:00: select *,cost=Number*price  from CISEquipment where  AccessionNumber='DSA118' order by RecordDate asc
+2019-03-29 12:23:00: success1
+2019-03-29 12:23:00: select *,cost=Number*price  from CISEquipment where  AccessionNumber='DSA118' order by RecordDate asc
+2019-03-29 12:23:00: success1
+2019-03-29 12:23:00: select * from CisReport where status=2 and  AccessionNumber = 'DSA118'
+2019-03-29 12:23:00: success0
+2019-03-29 12:23:00: select m.*,p.UserCode from pub_Menu as m, pub_userPrivilege as p where m.menucode = p.menucode and p.usercode = 'ly' and m.MenuName='耗材记录'
+2019-03-29 12:23:00: success1
+2019-03-29 12:23:00:  select * from studyOperateList where Leavedate is  null and OperateType = '编辑' and  AccessionNumber = 'DSA118' and ModuleName='耗材记录' and IPAddress='192.168.1.109'
+2019-03-29 12:23:00: success0
+2019-03-29 12:23:00: insert into StudyOperateList(UserCode,ModuleName,AccessionNumber,IPAddress,EnterDate,OperateType,SoftNodeID,SoftNodeName) values('ly','耗材记录','DSA118','192.168.1.109',GetDate(),'编辑','CIS03','3号导管室')
+2019-03-29 12:23:00: success1
+2019-03-29 12:23:02: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','冠脉造影','DSA118','192.168.1.109',GetDate())
+2019-03-29 12:23:02: success1
+2019-03-29 12:23:02: select * from CisReport where status=2 and  AccessionNumber = 'DSA118'
+2019-03-29 12:23:02: Failed
+2019-03-29 12:23:02: select m.*,p.UserCode from pub_Menu as m , pub_userPrivilege as p where m.menucode = p.menucode and p.usercode = 'ly' and m.MenuName='冠脉造影'
+2019-03-29 12:23:02: 203
+2019-03-29 12:23:02:  select * from studyOperateList where Leavedate is  null and OperateType = '编辑' and  AccessionNumber = 'DSA118' and ModuleName='冠脉造影'
+2019-03-29 12:23:02: Failed
+2019-03-29 12:23:02: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jrzlqk_cyss' order by b.ComboValueOrder asc
+2019-03-29 12:23:02: success9
+2019-03-29 12:23:02: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jrzlqk_bwjr' order by b.ComboValueOrder asc
+2019-03-29 12:23:02: success2
+2019-03-29 12:23:02: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jrzlqk_zlhTIMI' order by b.ComboValueOrder asc
+2019-03-29 12:23:02: success4
+2019-03-29 12:23:02: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jrzlqk_zrzj' order by b.ComboValueOrder asc
+2019-03-29 12:23:02: success8
+2019-03-29 12:23:02: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jrzlqk_szbfz' order by b.ComboValueOrder asc
+2019-03-29 12:23:02: success15
+2019-03-29 12:23:02: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_FFR_ty1' order by b.ComboValueOrder asc
+2019-03-29 12:23:02: success9
+2019-03-29 12:23:02: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_FFR_ty2' order by b.ComboValueOrder asc
+2019-03-29 12:23:02: success9
+2019-03-29 12:23:02: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_IVUS_IVUSsj1' order by b.ComboValueOrder asc
+2019-03-29 12:23:02: success12
+2019-03-29 12:23:02: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_IVUS_IVUSsj2' order by b.ComboValueOrder asc
+2019-03-29 12:23:02: success7
+2019-03-29 12:23:02: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_OCT_OCTsj1' order by b.ComboValueOrder asc
+2019-03-29 12:23:02: success12
+2019-03-29 12:23:02: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_OCT_OCTsj2' order by b.ComboValueOrder asc
+2019-03-29 12:23:02: success7
+2019-03-29 12:23:02: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_gmysx' order by b.ComboValueOrder asc
+2019-03-29 12:23:02: success3
+2019-03-29 12:23:02: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_jxgm' order by b.ComboValueOrder asc
+2019-03-29 12:23:02: success5
+2019-03-29 12:23:02: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_shzd' order by b.ComboValueOrder asc
+2019-03-29 12:23:02: success6
+2019-03-29 12:23:02: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_bhff' order by b.ComboValueOrder asc
+2019-03-29 12:23:02: success5
+2019-03-29 12:23:02: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_bfz' order by b.ComboValueOrder asc
+2019-03-29 12:23:02: success3
+2019-03-29 12:23:02: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_czxg' order by b.ComboValueOrder asc
+2019-03-29 12:23:02: success2
+2019-03-29 12:23:02: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_zhidong' order by b.ComboValueOrder asc
+2019-03-29 12:23:02: success3
+2019-03-29 12:23:02: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_jbxx_cabgs' order by b.ComboValueOrder asc
+2019-03-29 12:23:02: success5
+2019-03-29 12:23:02: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_xm_mtdx' order by b.ComboValueOrder asc
+2019-03-29 12:23:02: success4
+2019-03-29 12:23:02: select b.ComboValue,a.ComboType from ComboData as a,ComboDataDetail as b where a.ComboDataIndex=b.ComboDataIndex and a.ComboUID='gmzy_xm_jkxg' order by b.ComboValueOrder asc
+2019-03-29 12:23:02: success2
+2019-03-29 12:23:02: select  * from Coronary where AccessionNumber = 'DSA118'
+2019-03-29 12:23:02: 70
+2019-03-29 12:23:02: select  * from Coronary where AccessionNumber = 'DSA118'
+2019-03-29 12:23:02: success1
+2019-03-29 12:23:02: select *  from PACSPrint where AccessionNumber='DSA118' order by LesionName
+2019-03-29 12:23:02: success4
+2019-03-29 12:23:03: select *,(case xzcd when '区间' then  CAST(XzcdValue1 as varchar(4))+'-'+CAST(XzcdValue2 as varchar(4)) else  CAST(XzcdValue1 as varchar(4))  end ) as NewXzcd,(case Bbcd when '区间' then  CAST(BbcdValue1 as varchar(4))+'-'+CAST(BbcdValue2 as varchar(4)) else  CAST(BbcdValue1 as varchar(4))  end ) as NewBbcd   from CoronaryDetail where CoronaryIndex=70
+2019-03-29 12:23:03: success1
+2019-03-29 12:23:03: select DetailIndex,(Category+' '+EquipmentName+' '+EquipmentType+' '+Brand) as Equipment,number,sysfcg,cast(zxyl as varchar(12)) as zxyl,cast(zdyl as varchar(12)) as zdyl ,cast(sfsj as varchar(12)) as sfsj,bz from CoronaryEquipmentDetail  where CoronaryDetailIndex =145  and (Category like '%球囊%'  or Category like '%支架%' )  union  select DetailIndex,(Category + ' ' + EquipmentName + ' ' +EquipmentType + ' ' + Brand) as Equipment,number,sysfcg,zxyl='/ ',zdyl='/',sfsj='/',bz from CoronaryEquipmentDetail  where CoronaryDetailIndex = 145 and not (Category like '%球囊%')  and not (Category like '%支架%')  
+2019-03-29 12:23:03: success1
+2019-03-29 12:23:03: select * from CoronaryInterveneDetail where  CoronaryDetailIndex =145
+2019-03-29 12:23:03: success1
+2019-03-29 12:23:03: select * from CoronaryROTADetail where  CoronaryDetailIndex =145
+2019-03-29 12:23:03: success1
+2019-03-29 12:23:03: insert into StudyOperateList(UserCode,ModuleName,AccessionNumber,IPAddress,EnterDate,OperateType,SoftNodeID,SoftNodeName) values('ly','冠脉造影','DSA118','192.168.1.109',GetDate(),'编辑','CIS03','3号导管室')
+2019-03-29 12:23:03: success1
+2019-03-29 12:23:03: select DetailIndex,(Category+' '+EquipmentName+' '+EquipmentType+' '+Brand) as Equipment,number,sysfcg,cast(zxyl as varchar(12)) as zxyl,cast(zdyl as varchar(12)) as zdyl ,cast(sfsj as varchar(12)) as sfsj,bz from CoronaryEquipmentDetail  where CoronaryDetailIndex =145  and (Category like '%球囊%'  or Category like '%支架%' )  union  select DetailIndex,(Category + ' ' + EquipmentName + ' ' +EquipmentType + ' ' + Brand) as Equipment,number,sysfcg,zxyl='/ ',zdyl='/',sfsj='/',bz from CoronaryEquipmentDetail  where CoronaryDetailIndex = 145 and not (Category like '%球囊%')  and not (Category like '%支架%')  
+2019-03-29 12:23:03: success1
+2019-03-29 12:23:03: select * from CoronaryInterveneDetail where  CoronaryDetailIndex =145
+2019-03-29 12:23:03: success1
+2019-03-29 12:23:03: select * from CoronaryROTADetail where  CoronaryDetailIndex =145
+2019-03-29 12:23:03: success1
+2019-03-29 12:32:43: exec CreateReportInfoList 'DSA118'
+2019-03-29 12:32:43: success22
+2019-03-29 12:32:43: select *, (case InfoType when 'hlpg' then '护理评估' when 'hcjl' then '耗材记录' when 'hsjrzljl' then '护士介入治疗记录' when 'yyjl' then '用药记录' when 'ysjrzljl' then '医生介入治疗记录' else InfoType end )  as InfoTypeAlias  from ReportInfoList where  AccessionNumber='DSA118' order by RecordDate asc
+2019-03-29 12:32:43: success11
+2019-03-29 14:42:48: update StudyOperateList set LeaveDate = Getdate() where LeaveDate is null and  UserCode='ly' and ModuleName='操作记录' and AccessionNumber='DSA118'
+2019-03-29 14:42:48: success0
+2019-03-29 14:42:48: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','患者信息退出','DSA118','192.168.1.109',GetDate())
+2019-03-29 14:42:48: success1
+2019-03-29 14:42:49: update StudyOperateList set LeaveDate = Getdate() where LeaveDate is null and  UserCode='ly' and ModuleName='手术日志' and AccessionNumber='DSA118'
+2019-03-29 14:42:49: success0
+2019-03-29 14:42:49: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','患者信息退出','DSA118','192.168.1.109',GetDate())
+2019-03-29 14:42:49: success1
+2019-03-29 14:42:49: update StudyOperateList set LeaveDate = Getdate() where LeaveDate is null and   UserCode='ly' and AccessionNumber='DSA118' and IPAddress='192.168.1.109' and ModuleName='耗材记录'
+2019-03-29 14:42:49: success1
+2019-03-29 14:42:49: update StudyOperateList set LeaveDate = Getdate() where LeaveDate is null and  UserCode='ly' and ModuleName='耗材记录' and AccessionNumber='DSA118'
+2019-03-29 14:42:49: success0
+2019-03-29 14:42:49: insert into pub_LogInfo(UserCode,UserName,ModuleName,AccessionNumber,IPAddress,TimeStamp) values('ly','刘宇','患者信息退出','DSA118','192.168.1.109',GetDate())
+2019-03-29 14:42:49: success1
+2019-03-29 14:42:49: update StudyOperateList set LeaveDate = Getdate() where leaveDate is null and  UserCode='ly' and IPAddress='192.168.1.109'
+2019-03-29 14:42:49: success3
+2019-03-29 14:42:50: update StudyOperateList set LeaveDate = Getdate() where leaveDate is null and  UserCode='ly' and IPAddress='192.168.1.109'
+2019-03-29 14:42:50: success0

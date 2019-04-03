@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<body>
+  <ReportDetail>
+    <Field FieldName="hsjrzljl_sz_mzfs"  DefaultValue ="麻醉方式" >
+    </Field>
+    <Field FieldName="hsjrzljl_sq_sz"  DefaultValue ="神志" > 
+    </Field>
+    <Field FieldName="hsjrzljl_sq_js"  DefaultValue ="禁食" >
+    </Field>
+    <Field FieldName="hsjrzljl_sq_jmzg"  DefaultValue ="静脉置管" >
+    </Field>
+    <Field FieldName="hsjrzljl_sq_ddspysyqk"  DefaultValue ="电刀、射频仪使用情况" >
+                                                  
+    </Field>
+    <Field FieldName="hsjrzljl_sh_shpfjc"  DefaultValue ="术后皮肤检查" > 
+    </Field>
+    <Field FieldName="hsjrzljl_sh_cxdnzrwcl"  DefaultValue ="拆卸的内植入物处理" >
+    </Field>
+    <Field FieldName="hsjrzljl_sh_shsh"  DefaultValue ="术后送回" >
+    </Field>
+    <Field FieldName="hsjrzljl_sq_sqzd"  DefaultValue ="术前诊断" >
+    </Field>
+  </ReportDetail>
+</body>
