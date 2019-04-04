@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" DoublePass="true" MaxPages="10" StartReportEvent="_StartReport" ReportInfo.Created="11/01/2018 22:51:25" ReportInfo.Modified="03/07/2019 20:57:40" ReportInfo.CreatorVersion="2017.1.0.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+
+
+    private void _StartReport(object sender, EventArgs e)
+    {
+
+ //     Report.SetParameterValue(&quot;AccessionNumber&quot;,&quot;DSA238&quot;);
+ //     Report.SetParameterValue(&quot;PatientsIndex&quot;,32);
+ //     Report.SetParameterValue(&quot;CoronaryIndex&quot;,16);  
+
+    }
+  }
+}
+</ScriptText>
+  <Styles>
+    <Style Name="" Font="宋体, 10.5pt"/>
+  </Styles>
+  <Dictionary>
+    <MsSqlDataConnection Name="Connection" ConnectionString="rijcmlq++5g22xnSJ0Djm2w9mOsmHZkj58gXj6VIzqYD8K866pAzi1EMhTeCvKDjbuBHdO6B+HZm2+TQLy+CcMXg+EJd+g4tv8dsLgsrhPon1CrMy6Q135/bekUD1lx5OR8qai91aHcmTRQyADb7F6FE/jHb885NmnZadBCYEv3tu1yLJDN2aeHRKsib9CExOaGPSQfHoygyADrSGPNaUxcNF1F8Q==">
+      <TableDataSource Name="Table1" Alias="myReportInfo" DataType="System.Int32" Enabled="true" SelectCommand="select * from CISReport where AccessionNumber=@AccessionNumber">
+        <Column Name="ID" DataType="System.Int32"/>
+        <Column Name="ReportIndex222" DataType="System.Int32"/>
+        <Column Name="AccessionNumber" DataType="System.String"/>
+        <Column Name="PatientAge" DataType="System.Int32"/>
+        <Column Name="Lab" DataType="System.String"/>
+        <Column Name="PatientIndex" DataType="System.Int32"/>
+        <Column Name="ReportsDate" DataType="System.String"/>
+        <Column Name="ReportsTime" DataType="System.String"/>
+        <Column Name="ReportsCode" DataType="System.String"/>
+        <Column Name="ReportsName" DataType="System.String"/>
+        <Column Name="ApproveCode" DataType="System.String"/>
+        <Column Name="ApproveName" DataType="System.String"/>
+        <Column Name="LockUserCode" DataType="System.String"/>
+        <Column Name="Status" DataType="System.Int32"/>
+        <Column Name="Tech" DataType="System.String"/>
+        <Column Name="Physician" DataType="System.String"/>
+        <Column Name="Nurse" DataType="System.String"/>
+        <Column Name="ExamineType" DataType="System.String"/>
+        <Column Name="Steml" DataType="System.Boolean" BindableControl="CheckBox"/>
+        <Column Name="AdmissionType" DataType="System.String"/>
+        <Column Name="InterveneDoctorTime" DataType="System.DateTime"/>
+        <Column Name="InterveneNurserTime" DataType="System.DateTime"/>
+        <Column Name="AdmissionTime" DataType="System.DateTime"/>
+        <Column Name="ExamineName" DataType="System.String"/>
+        <Column Name="ExamineDoctor" DataType="System.String"/>
+        <Column Name="StudyDate" DataType="System.DateTime"/>
+        <Column Name="RegDate" DataType="System.DateTime"/>
+        <Column Name="EnterDate" DataType="System.DateTime"/>
+        <Column Name="LeaveDate" DataType="System.DateTime"/>
+        <Column Name="StudyStartDate" DataType="System.DateTime"/>
+        <Column Name="StudyEndDate" DataType="System.DateTime"/>
+        <Column Name="RealExamineName" DataType="System.String"/>
+        <Column Name="RealExamineDoctor" DataType="System.String"/>
+        <CommandParameter Name="AccessionNumber" DataType="22" Expression="AccessionNumber"/>
+      </TableDataSource>
+      <TableDataSource Name="Table2" Alias="myCoronary" DataType="System.Int32" Enabled="true" SelectCommand="select * from Coronary where AccessionNumber=@AccessionNumber">
+        <Column Name="CoronaryIndex" DataType="System.Int32"/>
+        <Column Name="AccessionNumber" DataType="System.String"/>
+        <Column Name="gmysx" DataType="System.String"/>
+        <Column Name="jxgm" DataType="System.String"/>
+        <Column Name="czxg" DataType="System.String"/>
+        <Column Name="cabgs" DataType="System.String"/>
+        <Column Name="gmjd" DataType="System.String"/>
+        <Column Name="shzd" DataType="System.String"/>
+        <Column Name="bgsj" DataType="System.Double"/>
+        <Column Name="fsjl" DataType="System.Double"/>
+        <Column Name="bfz" DataType="System.String"/>
+        <Column Name="bhff" DataType="System.String"/>
+        <Column Name="zhidong" DataType="System.String"/>
+        <Column Name="Recordcode" DataType="System.String"/>
+        <Column Name="RecordName" DataType="System.String"/>
+        <Column Name="RecordDate" DataType="System.DateTime"/>
+        <CommandParameter Name="AccessionNumber" DataType="22" Expression="AccessionNumber"/>
+      </TableDataSource>
+      <TableDataSource Name="Table3" Alias="myReportDetail" DataType="System.Int32" Enabled="true" SelectCommand="select FieldText,FieldGroup from CisReportDetail where AccessionNumber=@AccessionNumber">
+        <Column Name="FieldGroup" DataType="System.String"/>
+        <Column Name="FieldText" DataType="System.String"/>
+        <CommandParameter Name="AccessionNumber" DataType="22" Expression="AccessionNumber"/>
+      </TableDataSource>
+      <TableDataSource Name="Table4" Alias="myPatientInfo" DataType="System.Int32" Enabled="true" SelectCommand="select *,PatientAge=33 from Pub_Patients where PatientsIndex=@PatientsIndex">
+        <Column Name="PatientsIndex" DataType="System.Int32"/>
+        <Column Name="PatientsName" DataType="System.String"/>
+        <Column Name="PatientsAlias" DataType="System.String"/>
+        <Column Name="PatientsID" DataType="System.String"/>
+        <Column Name="PatientsIDAlias" DataType="System.String"/>
+        <Column Name="PatientsSex" DataType="System.String"/>
+        <Column Name="PatientsDOB" DataType="System.String"/>
+        <Column Name="PatientsPhone" DataType="System.String"/>
+        <Column Name="PatientsPostcode" DataType="System.String"/>
+        <Column Name="PatientsAddress" DataType="System.String"/>
+        <Column Name="PatientsCertificate" DataType="System.String"/>
+        <Column Name="PatientsComments" DataType="System.String"/>
+        <Column Name="PatientsProtective" DataType="System.Int32"/>
+        <Column Name="PatientsOccupation" DataType="System.String"/>
+        <Column Name="PatientAge" DataType="System.Int32"/>
+        <CommandParameter Name="PatientsIndex" DataType="8" Expression="PatientsIndex" DefaultValue="0"/>
+      </TableDataSource>
+      <TableDataSource Name="Table" Alias="Mzfs" DataType="System.Int32" Enabled="true" SelectCommand="select top 1 FieldText from CisReportDetail where FieldAbbr ='hsjrzljl_sz_mzfs' and AccessionNumber=@AccessionNumber">
+        <Column Name="FieldText" DataType="System.String"/>
+        <CommandParameter Name="AccessionNumber" DataType="22" Expression="AccessionNumber"/>
+      </TableDataSource>
+      <TableDataSource Name="Table5" Alias="myEquipmentInfo" DataType="System.Int32" Enabled="true" SelectCommand="select * from CisEquipment where AccessionNumber=@AccessionNumber order by Category asc">
+        <Column Name="EquipmentIndex" DataType="System.Int32"/>
+        <Column Name="AccessionNumber" DataType="System.String"/>
+        <Column Name="EquipmentID" DataType="System.String"/>
+        <Column Name="EquipmentName" DataType="System.String"/>
+        <Column Name="EquipmentType" DataType="System.String"/>
+        <Column Name="Brand" DataType="System.String"/>
+        <Column Name="Country" DataType="System.String"/>
+        <Column Name="Category" DataType="System.String"/>
+        <Column Name="Provider" DataType="System.String"/>
+        <Column Name="EquipmentUnit" DataType="System.String"/>
+        <Column Name="MainBarCode" DataType="System.String"/>
+        <Column Name="BatchCode" DataType="System.String"/>
+        <Column Name="Number" DataType="System.Int32"/>
+        <Column Name="price" DataType="System.Decimal"/>
+        <Column Name="source" DataType="System.String"/>
+        <Column Name="ExpiryDate" DataType="System.String"/>
+        <Column Name="RecordCode" DataType="System.String"/>
+        <Column Name="RecordName" DataType="System.String"/>
+        <Column Name="RecordDate" DataType="System.DateTime"/>
+        <CommandParameter Name="AccessionNumber" DataType="22" Expression="AccessionNumber"/>
+      </TableDataSource>
+      <TableDataSource Name="Coronary" Alias="myCoronaryDetail" DataType="System.Int32" Enabled="true" TableName="Coronary" SelectCommand="select *,(case xzcd when '区间' then  CAST(XzcdValue1 as varchar(4))+'-'+CAST(XzcdValue2 as varchar(4)) else  CAST(XzcdValue1 as varchar(4))  end ) as NewXzcd,(case Bbcd when '区间' then  CAST(BbcdValue1 as varchar(4))+'-'+CAST(BbcdValue2 as varchar(4)) else  CAST(BbcdValue1 as varchar(4))  end ) as NewBbcd from coronaryDetail  where CoronaryIndex=@CoronaryIndex and clyj like '本次治疗%'">
+        <Column Name="CoronaryIndex" DataType="System.Int32"/>
+        <Column Name="Recordcode" DataType="System.String"/>
+        <Column Name="RecordName" DataType="System.String"/>
+        <Column Name="RecordDate" DataType="System.DateTime"/>
+        <Column Name="DetailIndex" DataType="System.Int32"/>
+        <Column Name="bbbwIndex" DataType="System.String"/>
+        <Column Name="bbbw" DataType="System.String"/>
+        <Column Name="xzcd" DataType="System.String"/>
+        <Column Name="xzcdValue1" DataType="System.Double"/>
+        <Column Name="xzcdValue2" DataType="System.Double"/>
+        <Column Name="bbtd" DataType="System.String"/>
+        <Column Name="TIMI" DataType="System.String"/>
+        <Column Name="bbcd" DataType="System.String"/>
+        <Column Name="bbcdValue1" DataType="System.Double"/>
+        <Column Name="bbcdValue2" DataType="System.Double"/>
+        <Column Name="bbfx" DataType="System.String"/>
+        <Column Name="fzxg" DataType="System.String"/>
+        <Column Name="jrzl" DataType="System.String"/>
+        <Column Name="jwzj" DataType="System.String"/>
+        <Column Name="jwzjlx" DataType="System.String"/>
+        <Column Name="clyj" DataType="System.String"/>
+        <Column Name="NewXzcd" DataType="System.String"/>
+        <Column Name="NewBbcd" DataType="System.String"/>
+        <CommandParameter Name="CoronaryIndex" DataType="8" Expression="CoronaryIndex" DefaultValue="1"/>
+      </TableDataSource>
+      <TableDataSource Name="Table6" Alias="myCoronaryFFRDetail" DataType="System.Int32" Enabled="true" SelectCommand="select * from CoronaryFFRDetail ">
+        <Column Name="DetailIndex" DataType="System.Int32"/>
+        <Column Name="CoronaryDetailIndex" DataType="System.Int32"/>
+        <Column Name="FFR1" DataType="System.Double"/>
+        <Column Name="FFR2" DataType="System.Double"/>
+        <Column Name="ty1" DataType="System.String"/>
+        <Column Name="ty2" DataType="System.String"/>
+        <Column Name="Recordcode" DataType="System.String"/>
+        <Column Name="RecordName" DataType="System.String"/>
+        <Column Name="RecordDate" DataType="System.DateTime"/>
+      </TableDataSource>
+      <TableDataSource Name="Table7" Alias="myCoronaryInterveneDetail" DataType="System.Int32" Enabled="true" SelectCommand="select * from CoronaryInterveneDetail">
+        <Column Name="DetailIndex" DataType="System.Int32"/>
+        <Column Name="CoronaryDetailIndex" DataType="System.Int32"/>
+        <Column Name="cyss" DataType="System.String"/>
+        <Column Name="bwjr" DataType="System.String"/>
+        <Column Name="zlhxzcd" DataType="System.String"/>
+        <Column Name="zlhxzcdValue1" DataType="System.Double"/>
+        <Column Name="zlhxzcdValue2" DataType="System.Double"/>
+        <Column Name="zlhTIMI" DataType="System.String"/>
+        <Column Name="zrzj" DataType="System.String"/>
+        <Column Name="szbfz" DataType="System.String"/>
+        <Column Name="bz" DataType="System.String"/>
+        <Column Name="RecordCode" DataType="System.String"/>
+        <Column Name="RecordName" DataType="System.String"/>
+        <Column Name="RecordDate" DataType="System.DateTime"/>
+      </TableDataSource>
+      <TableDataSource Name="Table8" Alias="myCoronaryEquipmentDetail" DataType="System.Int32" Enabled="true" SelectCommand="select * from CoronaryEquipmentDetail">
+        <Column Name="DetailIndex" DataType="System.Int32"/>
+        <Column Name="CoronaryDetailIndex" DataType="System.Int32"/>
+        <Column Name="EquipmentIndex" DataType="System.Int32"/>
+        <Column Name="EquipmentName" DataType="System.String"/>
+        <Column Name="EquipmentType" DataType="System.String"/>
+        <Column Name="Category" DataType="System.String"/>
+        <Column Name="Brand" DataType="System.String"/>
+        <Column Name="EquipmentUnit" DataType="System.String"/>
+        <Column Name="ExpireDate" DataType="System.String"/>
+        <Column Name="Country" DataType="System.String"/>
+        <Column Name="Provider" DataType="System.String"/>
+        <Column Name="MainBarCode" DataType="System.String"/>
+        <Column Name="BatchCode" DataType="System.String"/>
+        <Column Name="Source" DataType="System.String"/>
+        <Column Name="number" DataType="System.Int32"/>
+        <Column Name="sysfcg" DataType="System.String"/>
+        <Column Name="zxyl" DataType="System.Double"/>
+        <Column Name="zdyl" DataType="System.Double"/>
+        <Column Name="sfsj" DataType="System.Double"/>
+        <Column Name="bz" DataType="System.String"/>
+        <Column Name="RecordCode" DataType="System.String"/>
+        <Column Name="RecordName" DataType="System.String"/>
+        <Column Name="RecordDate" DataType="System.DateTime"/>
+      </TableDataSource>
+      <TableDataSource Name="Table10" Alias="myCoronaryIVUSDetail" DataType="System.Int32" Enabled="true" SelectCommand="select * from CoronaryIVUSDetail">
+        <Column Name="DetailIndex" DataType="System.Int32"/>
+        <Column Name="CoronaryDetailIndex" DataType="System.Int32"/>
+        <Column Name="gqzxzj1" DataType="System.Double"/>
+        <Column Name="gqzxzj2" DataType="System.Double"/>
+        <Column Name="gqzdzj1" DataType="System.Double"/>
+        <Column Name="gqzdzj2" DataType="System.Double"/>
+        <Column Name="gqzxmj1" DataType="System.Double"/>
+        <Column Name="gqzxmj2" DataType="System.Double"/>
+        <Column Name="EEMzxzj1" DataType="System.Double"/>
+        <Column Name="EEMzxzj2" DataType="System.Double"/>
+        <Column Name="EEMzdzj1" DataType="System.Double"/>
+        <Column Name="EEMzdzj2" DataType="System.Double"/>
+        <Column Name="EEMmj1" DataType="System.Double"/>
+        <Column Name="EEMmj2" DataType="System.Double"/>
+        <Column Name="bkfh1" DataType="System.Double"/>
+        <Column Name="bkfh2" DataType="System.Double"/>
+        <Column Name="IVUSsj1" DataType="System.String"/>
+        <Column Name="IVUSsj2" DataType="System.String"/>
+        <Column Name="Recordcode" DataType="System.String"/>
+        <Column Name="RecordName" DataType="System.String"/>
+        <Column Name="RecordDate" DataType="System.DateTime"/>
+      </TableDataSource>
+      <TableDataSource Name="Table11" Alias="myCoronaryOCTDetail" DataType="System.Int32" Enabled="true" SelectCommand="select * from CoronaryOCTDetail">
+        <Column Name="DetailIndex" DataType="System.Int32"/>
+        <Column Name="CoronaryDetailIndex" DataType="System.Int32"/>
+        <Column Name="gqzxzj1" DataType="System.Double"/>
+        <Column Name="gqzxzj2" DataType="System.Double"/>
+        <Column Name="gqzdzj1" DataType="System.Double"/>
+        <Column Name="gqzdzj2" DataType="System.Double"/>
+        <Column Name="gqzxmj1" DataType="System.Double"/>
+        <Column Name="gqzxmj2" DataType="System.Double"/>
+        <Column Name="EEMzxzj1" DataType="System.Double"/>
+        <Column Name="EEMzxzj2" DataType="System.Double"/>
+        <Column Name="EEMzdzj1" DataType="System.Double"/>
+        <Column Name="EEMzdzj2" DataType="System.Double"/>
+        <Column Name="EEMmj1" DataType="System.Double"/>
+        <Column Name="EEMmj2" DataType="System.Double"/>
+        <Column Name="bkfh1" DataType="System.Double"/>
+        <Column Name="bkfh2" DataType="System.Double"/>
+        <Column Name="OCTsj1" DataType="System.String"/>
+        <Column Name="OCTsj2" DataType="System.String"/>
+        <Column Name="Recordcode" DataType="System.String"/>
+        <Column Name="RecordName" DataType="System.String"/>
+        <Column Name="RecordDate" DataType="System.DateTime"/>
+      </TableDataSource>
+      <TableDataSource Name="Table12" Alias="myCoronaryROTADetail" DataType="System.Int32" Enabled="true" SelectCommand="select * from CoronaryRotaDetail ">
+        <Column Name="DetailIndex" DataType="System.Int32"/>
+        <Column Name="CoronaryDetailIndex" DataType="System.Int32"/>
+        <Column Name="mtdx" DataType="System.String"/>
+        <Column Name="zs" DataType="System.Double"/>
+        <Column Name="jkxg" DataType="System.String"/>
+        <Column Name="Recordcode" DataType="System.String"/>
+        <Column Name="RecordName" DataType="System.String"/>
+        <Column Name="RecordDate" DataType="System.DateTime"/>
+      </TableDataSource>
+      <TableDataSource Name="Table14" Alias="myCoronaryDetailAll" DataType="System.Int32" Enabled="true" SelectCommand="select *,(case xzcd when '区间' then  CAST(XzcdValue1 as varchar(4))+'-'+CAST(XzcdValue2 as varchar(4)) else  CAST(XzcdValue1 as varchar(4))  end ) as NewXzcd,(case Bbcd when '区间' then  CAST(BbcdValue1 as varchar(4))+'-'+CAST(BbcdValue2 as varchar(4)) else  CAST(BbcdValue1 as varchar(4))  end ) as NewBbcd from coronaryDetail  where CoronaryIndex=@CoronaryIndex ">
+        <Column Name="DetailIndex" DataType="System.Int32"/>
+        <Column Name="CoronaryIndex" DataType="System.Int32"/>
+        <Column Name="bbbwIndex" DataType="System.String"/>
+        <Column Name="bbbw" DataType="System.String"/>
+        <Column Name="xzcd" DataType="System.String"/>
+        <Column Name="xzcdValue1" DataType="System.Double"/>
+        <Column Name="xzcdValue2" DataType="System.Double"/>
+        <Column Name="bbtd" DataType="System.String"/>
+        <Column Name="TIMI" DataType="System.String"/>
+        <Column Name="bbcd" DataType="System.String"/>
+        <Column Name="bbcdValue1" DataType="System.Double"/>
+        <Column Name="bbcdValue2" DataType="System.Double"/>
+        <Column Name="bbfx" DataType="System.String"/>
+        <Column Name="fzxg" DataType="System.String"/>
+        <Column Name="jrzl" DataType="System.String"/>
+        <Column Name="jwzj" DataType="System.String"/>
+        <Column Name="jwzjlx" DataType="System.String"/>
+        <Column Name="clyj" DataType="System.String"/>
+        <Column Name="RecordCode" DataType="System.String"/>
+        <Column Name="RecordName" DataType="System.String"/>
+        <Column Name="RecordDate" DataType="System.DateTime"/>
+        <Column Name="NewXzcd" DataType="System.String"/>
+        <Column Name="NewBbcd" DataType="System.String"/>
+        <CommandParameter Name="CoronaryIndex" DataType="22" Expression="CoronaryIndex"/>
+      </TableDataSource>
+    </MsSqlDataConnection>
+    <Parameter Name="AccessionNumber" DataType="System.String"/>
+    <Parameter Name="CoronaryIndex" DataType="System.Int32"/>
+    <Parameter Name="PatientsIndex" DataType="System.Int32"/>
+    <Parameter Name="PatientsAge" DataType="System.String"/>
+    <Parameter Name="Mzfs" DataType="System.String" Description="麻醉方式"/>
+    <Parameter Name="yyjlText" DataType="System.String" Expression="[AccessionNumber]"/>
+  </Dictionary>
+  <ReportPage Name="Page1" RawPaperSize="9">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="207.35" CanGrow="true" PrintOn="LastPage, OddPages, EvenPages, RepeatedBand, SinglePage" Guides="18.9,47.25,47.25">
+      <TextObject Name="Text1" Left="-37.8" Top="18.9" Width="689.85" Height="28.35" Text="浙江省市第一人民医院" HorzAlign="Center" Font="宋体, 18pt, style=Bold"/>
+      <TextObject Name="Text2" Left="170.1" Top="56.7" Width="236.25" Height="18.9" Text="介入手术治疗记录单" HorzAlign="Center" Font="宋体, 14.25pt, style=Bold"/>
+      <TextObject Name="Text16" Left="463.05" Top="66.7" Width="217.35" Height="18.9" Text="检查号：[AccessionNumber]" Font="宋体, 10.5pt"/>
+      <LineObject Name="Line1" Top="89.05" Width="718.2"/>
+      <TextObject Name="Text7" Left="444.15" Top="91.05" Width="264.6" Height="18.9" CanGrow="true" Text="出生年月：[Substring([myPatientInfo.PatientsDOB],0,4)]年[Substring([myPatientInfo.PatientsDOB],4,2)]月[Substring([myPatientInfo.PatientsDOB],6,2)]日" VertAlign="Center" Font="新宋体, 10.5pt"/>
+      <TextObject Name="Text3" Left="4" Top="91.05" Width="198.45" Height="18.9" CanGrow="true" Text="病人姓名：[myPatientInfo.PatientsName]" VertAlign="Center" Font="新宋体, 10.5pt"/>
+      <TextObject Name="Text4" Left="217.35" Top="93.05" Width="198.45" Height="18.9" CanGrow="true" Text="性别：[myPatientInfo.PatientsSex]" VertAlign="Center" Font="新宋体, 10.5pt"/>
+      <TextObject Name="Text8" Left="444.15" Top="112.85" Width="198.45" Height="18.9" CanGrow="true" Text="手术间：[myReportInfo.Lab]" VertAlign="Bottom" Font="新宋体, 10.5pt"/>
+      <TextObject Name="Text12" Left="444.15" Top="155.65" Width="529.2" Height="18.9" CanGrow="true" Text="临床诊断：" Font="新宋体, 10.5pt"/>
+      <TextObject Name="Text78" Left="4" Top="110.85" Width="198.45" Height="18.9" CanGrow="true" Text="病案号：[myPatientInfo.PatientsID]" VertAlign="Bottom" Font="新宋体, 10.5pt"/>
+      <TextObject Name="Text79" Left="217.35" Top="110.85" Width="198.45" Height="18.9" CanGrow="true" Text="年龄：[myPatientInfo.PatientAge]" VertAlign="Bottom" Font="新宋体, 10.5pt"/>
+      <TextObject Name="Text13" Left="444.15" Top="178.45" Width="255.15" Height="18.9" Text="[CisReportDetail.hsjrzljl_sz_mzfs]" AutoShrink="FontSize" VertAlign="Center" Font="新宋体, 10.5pt"/>
+      <TextObject Name="Text23" Left="4" Top="174.94" Width="425.25" Height="18.9" Text="手术医生：[myReportInfo.ExamineDoctor]" VertAlign="Bottom" Font="新宋体, 10.5pt"/>
+      <TextObject Name="Text11" Left="4" Top="136.65" Width="689.85" Height="18.9" CanGrow="true" CanBreak="false" Text="手术名称：[myReportInfo.ExamineName]" Font="宋体, 10.5pt"/>
+      <LineObject Name="Line2" Top="202.8" Width="718.2" CanGrow="true"/>
+      <TextObject Name="Text9" Left="4" Top="158" Width="368.55" Height="18.9" Text="手术类别:[myReportInfo.ExamineType]" Font="新宋体, 10.5pt"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="211.35" Width="718.2" Height="30.35" PrintOn="LastPage, OddPages, EvenPages, RepeatedBand">
+      <TextObject Name="Text83" Left="214" Top="9.45" Width="94.5" Height="18.9" CanGrow="true" Text="年龄：[myPatientInfo.PatientAge]" VertAlign="Center" Font="新宋体, 10.5pt"/>
+      <TextObject Name="Text84" Left="2.45" Top="9.45" Width="132.3" Height="18.9" CanGrow="true" Text="病人姓名：[myPatientInfo.PatientsName]" VertAlign="Center" Font="新宋体, 10.5pt"/>
+      <TextObject Name="Text85" Left="133.75" Top="9.45" Width="75.6" Height="18.9" CanGrow="true" Text="性别：[myPatientInfo.PatientsSex]" VertAlign="Center" Font="新宋体, 10.5pt"/>
+      <TextObject Name="Text86" Left="548.1" Top="9.45" Width="170.1" Height="18.9" CanGrow="true" Text="浙江省市第一人民医院" HorzAlign="Center" VertAlign="Center" Font="新宋体, 10.5pt"/>
+      <TextObject Name="Text87" Left="340.2" Top="9.45" Width="217.35" Height="18.9" CanGrow="true" Text="手术日期：[myReportInfo.StudyDate]" VertAlign="Center" Font="新宋体, 10.5pt"/>
+    </PageHeaderBand>
+    <DataBand Name="Data7" Top="245.7" Width="718.2" Height="62.5" CanGrow="true" Guides="141.75">
+      <TextObject Name="Text27" Left="9.45" Top="5.33" Width="425.25" Height="18.9" Text="术前：" VertAlign="Bottom" Font="新宋体, 10.5pt"/>
+      <TextObject Name="Text28" Left="444.15" Top="24.72" Width="425.25" Height="18.9" Text="[CisReportDetail.hsjrzljl_sq_jmzg]  " VertAlign="Center" Font="新宋体, 10.5pt"/>
+      <TextObject Name="Text25" Left="9.45" Top="24.72" Width="264.6" Height="18.9" Text="[CisReportDetail.hsjrzljl_sq_sz]" VertAlign="Bottom" Font="新宋体, 10.5pt"/>
+      <TextObject Name="Text26" Left="9.45" Top="43.11" Width="425.25" Height="18.9" Text="[CisReportDetail.hsjrzljl_sq_ddspysyqk]  " VertAlign="Bottom" Font="新宋体, 10.5pt"/>
+      <TextObject Name="Text6" Left="283.5" Top="24.72" Width="170.1" Height="18.9" Text="[CisReportDetail.hsjrzljl_sq_js]" VertAlign="Center"/>
+    </DataBand>
+    <DataBand Name="Data6" Top="312.2" Width="718.2" Height="47.25" CanGrow="true">
+      <TextObject Name="Text15" Left="9.45" Width="699.3" Height="47.25" CanGrow="true" CanBreak="false" Text="术中用药：&#13;&#10;[yyjlText]" Font="宋体, 10.5pt" Clip="false"/>
+    </DataBand>
+    <DataBand Name="Data211" Top="363.45" Width="718.2" Height="56.7" CanGrow="true">
+      <TextObject Name="Text80" Left="9.45" Top="9.45" Width="699.3" Height="47.25" CanGrow="true" CanBreak="false" Text="监护记录：&#13;&#10;[CisReportDetail.User_jhjl]" Font="宋体, 10.5pt" Clip="false"/>
+      <ChildBand Name="Child7" Top="424.15" Width="718.2" Height="28.35" CanGrow="true"/>
+    </DataBand>
+    <DataBand Name="Data4" Top="456.5" Width="718.2" Height="103.95">
+      <TextObject Name="Text31" Left="9.45" Top="56.7" Width="207.9" Height="18.9" Text="[CisReportDetail.hsjrzljl_sh_shsh]" VertAlign="Bottom" Font="新宋体, 10.5pt"/>
+      <TextObject Name="Text32" Left="481.95" Top="56.7" Width="217.35" Height="18.9" Text="护士：[myReportInfo.Nurse]" VertAlign="Bottom" Font="新宋体, 10.5pt"/>
+      <TextObject Name="Text30" Left="9.45" Top="28.35" Width="425.25" Height="18.9" Text="[CisReportDetail.hsjrzljl_sh_cxdnzrwcl]" VertAlign="Bottom" Font="新宋体, 10.5pt"/>
+      <TextObject Name="Text29" Left="9.45" Top="9.45" Width="66.15" Height="18.9" Text="术后：" VertAlign="Bottom" Font="新宋体, 10.5pt, style=Bold"/>
+      <TextObject Name="Text81" Left="75.6" Top="9.45" Width="500.85" Height="18.9" CanGrow="true" Text="[CisReportDetail.hsjrzljl_sh_shpfjc]" VertAlign="Center" Font="新宋体, 10.5pt"/>
+      <TextObject Name="Text82" Left="217.35" Top="56.7" Width="264.6" Height="18.9" Text="离DSA时间：[myReportInfo.LeaveDate]" VertAlign="Center" Font="新宋体, 10.5pt"/>
+      <TextObject Name="Text5" Left="481.95" Top="28.35" Width="94.5" Height="18.9" Text="医生签名："/>
+      <ChildBand Name="Child2" Top="564.45" Width="718.2" Height="37.8"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="606.25" Width="718.2" Height="23.9" PrintOn="FirstPage, LastPage, OddPages, EvenPages, SinglePage">
+      <TextObject Name="Text18" Left="652.05" Top="5" Width="56.7" Height="18.9" Text="[Page#]/[TotalPages#]" HorzAlign="Right"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>
